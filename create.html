@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google icons library that looks kind of cool -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div id="topBar">
+            <div id="logo">
+                <h1>Neighbor Share Project</h1>
+            </div>
+            <div id="userPrompt">I am looking to<br>
+                <button id="borrow">borrow</button>
+                <button id="lend">lend</button>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html" id="homePage">Home</a>
+            <a href="about.html" id="aboutPage">About Us</a> <!-- include links to our own portfolios?? -->
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#testimonials">Testimonials</a>
+            <a href="create.html" id="createPage">Get Started</a>
+        </nav>
+    </header>
+    <!-- Maybe some graphics/diagram with a quick overview of how the page works? -->
+    <p>Before we start, let's see if your neighbors have set up a space for you yet!</p>
+    <p>Enter your address to search:
+        <input type="search" id="addressSearch" placeholder="123 Main Street, San Jose, CA" />
+        <input type="button">Search</input>
+    </p>
+    <!-- if space is there already, redirect to index.html with the unique id attached to display the map and loan items-->
+    <!-- if no results found, then prompt user to create a space using modal? -->
+    <div class="modal">
+        <h2>Create Your Space</h2>
+        <div id="userFlow">
+            <span class="material-symbols-outlined">mood_bad</span>
+            Have a party coming up and you need to source a lot of items?<br>
+            <span class="material-symbols-outlined">emoji_objects</span>
+            What if - instead of buying or renting all of those items - you could just reach out to your neighbors to
+            see if they have what you need?<br>
+            <span class="material-symbols-outlined">crowdsource</span>
+            Connect with your neighbors and create an active, engaged community that helps each other and reduces
+            material consumption at the same time!
+            <span class="material-symbols-outlined">diversity_1</span>
+
+        </div>
+        <!-- Map image centered on #addressSearch with an option for the user to choose radius?? ie 1 mile, 5 miles, 25 miles -- maybe keep it at a default 5 miles or something for the "mvp" -->
+        <!-- I was hoping the user could set boundaries but it's not looking likely! -->
+        <!-- Map parameters/API URL get saved as an object to client side storage with a unique ID attached -->
+        <h3>Share with your Neighbors!</h3>
+        <form>
+            <textarea rows="13" cols="50">
+Hi Neighbor! This is [Your name]! I just set up a new neighbor lending space at Neighbor Share. 
+
+You will be able to borrow and lend all sorts of items exclusively with our neighbors. You can access it using the passcode below. 
+
+Please feel free to share with anybody in the neighborhood!
+
+            happy-82ay9j5
+            </textarea>
+            <div id="share">
+                <span class="material-symbols-outlined">
+                    content_copy
+                </span>
+                <span class="material-symbols-outlined">
+                    share
+                </span>
+            </div>
+        </form>
+    </div>
+    <footer>
+        Created by Group Name 2023
+    </footer>
+</body>
+
+</html>
