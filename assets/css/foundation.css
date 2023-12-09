@@ -68,6 +68,47 @@ body{
   }
   
   
+  /* For the graphic on how to use the web application  */
+.marketing-site-features {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .marketing-site-features .fa {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1779ba;
+  }
+  
+  .marketing-site-features .marketing-site-features-title {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  
+  @media screen and (min-width: 40em) {
+    .marketing-site-features {
+      text-align: left;
+    }
+  }
+  
+  .marketing-site-features-headline {
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .marketing-site-features-subheadline {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  
+  
+
+  
   
   
   
