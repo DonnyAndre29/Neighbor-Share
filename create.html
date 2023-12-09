@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google icons library that looks kind of cool -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link href="./assets/css/foundation.css" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <div id="topBar">
             <div id="logo">
                 <h1>Neighbor Share Project</h1>
@@ -21,18 +23,41 @@
             </div>
         </div>
         <nav>
-            <a href="index.html" id="homePage">Home</a>
-            <a href="about.html" id="aboutPage">About Us</a> <!-- include links to our own portfolios?? -->
+            <a href="index.html" id="homePage">Home</a> -->
+            <!-- <a href="about.html" id="aboutPage">About Us</a> include links to our own portfolios??
             <a href="index.html#faq">FAQ</a>
             <a href="index.html#testimonials">Testimonials</a>
             <a href="create.html" id="createPage">Get Started</a>
         </nav>
+    </header> -->
+
+    <header class="subnav-hero-section">
+        <!-- <img src="./assets/Images/Logo.png" width="75px" height="75px"> -->
+        <h1 class="subnav-hero-headline"> Neighbor Share <small> by Eight </small></h1>
+        <ul class="subnav-hero-subnav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a target="_blank" href="https://zurb.com/responsive">FAQ</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#" class="is-active" >Get Started</a></li>
+        </ul>
     </header>
+      
+      
     <!-- Maybe some graphics/diagram with a quick overview of how the page works? -->
     <p>Before we start, let's see if your neighbors have set up a space for you yet!</p>
     <p>Enter your address to search:
-        <input type="search" id="addressSearch" placeholder="123 Main Street, San Jose, CA" />
-        <input type="button">Search</input>
+        <!-- <input type="search" id="addressSearch" placeholder="123 Main Street, San Jose, CA" /> -->
+        <div class="input-group input-group-rounded">
+            <input class="input-group-field" type="search">
+            <div class="input-group-button">
+              <input type="submit" class="button secondary" value="Search">
+            </div>
+          </div>
+          
+          
+
+
     </p>
     <!-- if space is there already, redirect to index.html with the unique id attached to display the map and loan items-->
     <!-- if no results found, then prompt user to create a space using modal? -->
