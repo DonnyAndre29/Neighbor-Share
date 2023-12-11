@@ -17,18 +17,31 @@
         <!-- Navbar -->
         <nav>
             <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#FAQ">FAQ</a></li>
-                <li><a href="#Reviews">Reviews</a></li>
-                <li><a href="#Get-Started">Get Started</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#review">Reviews</a></li>
+                <li><a href="create.html">Get Started</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="content">
+        <section id="home">
             <!-- This h2 will be a brief description of our "app" or "website"-->
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+            <h2>Welcome to Neighbor Share!</h2>
+            <h3>Your go-to website to connect with your neighborhood through lending and borrowing.</h3>
+            <h2>Why Neighbor-Share?</h2>
+            <ul>
+                <li>
+                    <p>Build strong relationships with your neighbors while lending and borrowing.</p>
+                </li>
+                <li>
+                    <p>Reduce waste and save money by just borrowing.</p>
+                </li>
+                <li>
+                    <p>Our platform promotes safe transactions and a secure lending enviroment.</p>
+                </li>
+            </ul>
             <!-- I created a "get started button" under the description of our page so users can instantly jump to the get started page."-->
             <a href="create.html" class="button">Get Started</a>
             <!-- For now I'm using the "#" because we don't have any pictures-->
@@ -52,8 +65,12 @@
                 </ul>
             </div>
         </section>
+        <!-- listing page after finishing with "get started"-->
+        <section id="listing">
 
-        <section class="faq-section">
+        </section>
+
+        <section id="faq">
             <h2>Frequently Asked Questions</h2>
                 <!-- So I used <details> and <summary> to create the FAQ section. <detail> is to represent a disclosure widget. The user can expand or collapse-->
                 <!-- <detail> is to represent a disclosure widget. The user can expand or collapse-->
@@ -75,7 +92,7 @@
                 </details>
         </section>
 
-        <section class="Review-Section">
+        <section id="review">
             <h2>Reviews/Comments</h2>
             <div class="review-1">
                 <p class="reviewer">Benita Isaac</p>
