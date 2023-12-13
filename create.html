@@ -16,7 +16,7 @@
 <body>
 
   <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Trh306y0-7X7pNuU9u_dTFrJhxK7mGI&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Trh306y0-7X7pNuU9u_dTFrJhxK7mGI&libraries=places&callback=initMap"
       async defer
     ></script>
 
@@ -102,7 +102,7 @@
           <h3 class="marketing-site-content-section-block-header">Before we start, let's see if your neighbors have set up a space for you yet!</h3>
           <p class="marketing-site-content-section-block-subheader subheader">Enter your address to search:</p>
           <div class="input-group input-group-rounded">
-            <input class="input-group-field" type="search">
+            <input class="input-group-field" type="text" id="addressInput" placeholder="Enter your address">
             <div class="input-group-button">
               <input type="submit" class="button secondary" value="Search">
             </div>

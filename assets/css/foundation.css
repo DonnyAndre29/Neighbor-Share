@@ -351,3 +351,10 @@ gmp-map {
   height: 400px;
 }
 
+/* For search bar  */
+#addressInput {
+  width: 300px;
+  padding: 8px;
+  font-size: 16px;
+}
+
