@@ -4,51 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link href="./assets/css/foundation.css" rel="stylesheet">
     <title>Nighbor Share</title>
 </head>
 <body>
     <header class="header">
         <!-- This .logo and h1 will be on the top left of the page. For now I'm using the "#" because we don't have a logo -->
         <div class="logo">
-            <img src="#" alt="Logo" width="100" height="100">
+            <img src="./assets/Images/Logo.png" alt="Logo" width="100" height="100">
         </div>
-        
-        <h1>Neighbor Share</h1>
-        <!-- Navbar -->
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#review">Reviews</a></li>
-                <li><a href="create.html">Get Started</a></li>
-            </ul>
-        </nav>
+
+
+    <header class="subnav-hero-section">
+        <img src="./assets/Images/Logo.png" width="75px" height="75px">
+        <h1 class="subnav-hero-headline"> Neighbor Share <small> by Eight </small></h1>
+        <ul class="subnav-hero-subnav">
+          <li><a href="#Home">Home</a></li>
+          <!-- <li><a href="#">About Us</a></li> -->
+          <li><a href="#FAQ">FAQ</a></li>
+          <li><a href="#Reviews">Reviews</a></li>
+          <li><a href="create.html">Get Started</a></li>
+        </ul>
+
+       
+ 
     </header>
+
+    <!-- Maybe some graphics/diagram with a quick overview of how the page works? -->
+    <div class="marketing-site-features">
+        <h2 class="marketing-site-features-headline">Neighbor Share: Your Community, Your Resources, Your Events—Simplify, Connect, and Borrow for a Stronger Neighborhood</h2>
+        <p class="marketing-site-features-subheadline subheader"></p>
+        <div class="row">
+          <div class="small-12 medium-3 columns">
+            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+            <!-- Add an image here  -->
+            <h4 class="marketing-site-features-title">Step 1</h4>
+            <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="small-12 medium-3 columns">
+            <i class="fa fa-angellist" aria-hidden="true"></i>
+            <!-- Add an image here  -->
+            <h4 class="marketing-site-features-title">Step 2 </h4>
+            <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="small-12 medium-3 columns">
+            <i class="fa fa-bullseye" aria-hidden="true"></i>
+            <!-- Add an image here  -->
+            <h4 class="marketing-site-features-title">Step 3</h4>
+            <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+          <div class="small-12 medium-3 columns">
+            <i class="fa fa-battery-full" aria-hidden="true"></i>
+            <!-- Add an image here  -->
+            <h4 class="marketing-site-features-title">Step 4</h4>
+            <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <a href="create.html" class="button">Get Started</a>
+          </div>
+        </div>
+      </div>
 
     <main>
         <section id="home">
             <!-- This h2 will be a brief description of our "app" or "website"-->
-            <h2>Welcome to Neighbor Share!</h2>
-            <h3>Your go-to website to connect with your neighborhood through lending and borrowing.</h3>
-            <h2>Why Neighbor-Share?</h2>
-            <ul>
-                <li>
-                    <p>Build strong relationships with your neighbors while lending and borrowing.</p>
-                </li>
-                <li>
-                    <p>Reduce waste and save money by just borrowing.</p>
-                </li>
-                <li>
-                    <p>Our platform promotes safe transactions and a secure lending enviroment.</p>
-                </li>
-            </ul>
+
+            <!-- <h2>Neighbor Share: Your Community, Your Resources, Your Events—Simplify, Connect, and Borrow for a Stronger Neighborhood</h2> --> 
+           
+
             <!-- I created a "get started button" under the description of our page so users can instantly jump to the get started page."-->
-            <a href="create.html" class="button">Get Started</a>
+            <!-- <a href="create.html" class="button">Get Started</a> -->
             <!-- For now I'm using the "#" because we don't have any pictures-->
         </section> 
 
-        <section class="pictures">
-            <!-- Pictures of our website using carousel -->
+        <!-- <section class="pictures">
+            Pictures of our website using carousel
             <div class="carousel">
                 <button class="carousel-button-next">&rarr;</button>
                 <button class="carousel-button-prev">&larr;</button>
@@ -64,11 +93,76 @@
                     </li>
                 </ul>
             </div>
-        </section>
-        <!-- listing page after finishing with "get started"-->
-        <section id="listing">
 
-        </section>
+        </section> -->
+
+        <div id="listings">
+            <div class="featured-image-block-grid">
+                <div class="featured-image-block-grid-header small-10 medium-8 large-7 columns text-center">
+                  <h2>Your Listings</h2>
+                  <p>Take a look at some of the listings available near you.</p>
+                </div>
+                <div class="row large-up-4 small-up-2">
+                  <div class="featured-image-block column">
+                   <a href="#">
+                      <img src="https://unsplash.it/600/440?image=899" />
+                      <p class="text-center featured-image-block-title">New York</p>
+                    </a>
+                  </div>
+                  
+                  <div class="featured-image-block column">
+                   <a href="#">
+                      <img src="https://unsplash.it/600/440?image=693" />
+                      <p class="text-center featured-image-block-title">San Francisco</p>
+                    </a>
+                  </div>
+                  
+                  <div class="featured-image-block column">
+                   <a href="#">
+                      <img src="https://unsplash.it/600/440?image=452" />
+                      <p class="text-center featured-image-block-title">Las Vegas</p>
+                    </a>
+                  </div>
+                  
+                  <div class="featured-image-block column">
+                   <a href="#">
+                      <img src="https://unsplash.it/600/440?image=792" />
+                      <p class="text-center featured-image-block-title">Sacramento</p>
+                    </a>
+                  </div>
+                  
+                  <div class="featured-image-block column">
+                   <a href="#">
+                      <img src="https://unsplash.it/600/440?image=667" />
+                      <p class="text-center featured-image-block-title">Los Angeles</p>
+                    </a>
+                  </div>
+                
+                  <div class="featured-image-block column">
+                   <a href="#">
+                      <img src="https://unsplash.it/600/440?image=249" />
+                      <p class="text-center featured-image-block-title">Chicago</p>
+                    </a>
+                  </div>
+                  
+                  <div class="featured-image-block column">
+                   <a href="#">
+                      <img src="https://unsplash.it/600/440?image=382" />
+                      <p class="text-center featured-image-block-title">Boston</p>
+                    </a>
+                  </div>
+              
+                  <div class="featured-image-block column">
+                   <a href="#">
+                      <img src="https://unsplash.it/600/440?image=1075" />
+                      <p class="text-center featured-image-block-title">Seattle</p>
+                    </a>
+                  </div>
+                </div>
+              </div>              
+        </div>
+
+       
 
         <section id="faq">
             <h2>Frequently Asked Questions</h2>
@@ -83,11 +177,15 @@
                         Additionally, user profiles and reviews contribute to building a trustworthy neighborhood network.</p>
                 </details>
 
-                <details>
+                <details> 
                     <summary>What if an item is damaged during the borrowing period?</summary>
                     <p>In the unfortunate event of damage, communicate with the neighbor through the platform's messaging system to discuss the situation. 
                         Neighbor Share encourages open communication and collaborative problem-solving. 
+
+                       
+
                         If a resolution cannot be reached, refer to the community guidelines for guidance.</p>
+
                 </details>
 
                 <details>
