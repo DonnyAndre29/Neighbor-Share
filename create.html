@@ -9,9 +9,17 @@
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
     <link rel="stylesheet" href="./assets/css/foundation.css">
     <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- <script type="module" src="./index.js"></script> -->
 </head>
 
 <body>
+
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Trh306y0-7X7pNuU9u_dTFrJhxK7mGI&callback=initMap"
+      async defer
+    ></script>
+
     <!-- <header>
         <div id="topBar">
             <div id="logo">
@@ -105,6 +113,8 @@
           <img src="https://images.pexels.com/photos/300857/pexels-photo-300857.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" />
         </div>
       </div>
+
+      <div id="map"></div>
       
       
     <!-- if space is there already, redirect to index.html with the unique id attached to display the map and loan items-->
@@ -198,6 +208,7 @@ Please feel free to share with anybody in the neighborhood!
     <footer>
         Created by Group Name 2023
     </footer>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
