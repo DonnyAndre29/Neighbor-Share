@@ -1,238 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link href="./assets/css/foundation.css" rel="stylesheet">
-    <title>Nighbor Share</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <!-- Link to Google Fonts API - url can be altered to include more fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cookie&family=Kalnia:wght@100&family=Poppins:wght@200&display=swap"
+    rel="stylesheet">
+  <link href="./assets/css/foundation.css" rel="stylesheet">
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <title>Neighbor Share</title>
 </head>
+
 <body>
-    <header class="header">
-        <!-- This .logo and h1 will be on the top left of the page. For now I'm using the "#" because we don't have a logo -->
-        <div class="logo">
-            <img src="./assets/Images/Logo.png" alt="Logo" width="100" height="100">
+  <header class="subnav-hero-section">
+    <img src="./assets/Images/Logo.png" width="75px" height="75px">
+    <h1 class="subnav-hero-headline"> Neighbor Share</h1>
+    <div>by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span></div>
+    <ul class="subnav-hero-subnav">
+      <li><a href="#">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#review">Reviews</a></li>
+      <li><a href="create.html">Get Started</a></li>
+    </ul>
+  </header>
+
+  <!-- Quick step by step of how the site works -->
+  <div class="marketing-site-features">
+    <h2 class="marketing-site-features-headline">Neighbor Share: Your Community, Your Resources, Your Events</h2>
+    <h3>Simplify,
+      Connect, and Borrow for a Stronger Neighborhood</h3>
+    <p class="marketing-site-features-subheadline subheader"></p>
+    <div class="row">
+      <div class="small-12 medium-3 columns">
+        <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+        <!-- Add an image here  -->
+        <h4 class="marketing-site-features-title">Step 1</h4>
+        <p class="marketing-site-features-desc">Enter your key <input type="text"></input> or <a
+            href="create.html">create your space</a></p>
+      </div>
+      <div class="small-12 medium-3 columns">
+        <i class="fa fa-angellist" aria-hidden="true"></i>
+        <!-- Add an image here  -->
+        <h4 class="marketing-site-features-title">Step 2 </h4>
+        <p class="marketing-site-features-desc">See and share your item listings for loan.</p>
+      </div>
+      <div class="small-12 medium-3 columns">
+        <i class="fa fa-bullseye" aria-hidden="true"></i>
+        <!-- Add an image here  -->
+        <h4 class="marketing-site-features-title">Step 3</h4>
+        <p class="marketing-site-features-desc">Contact your neighbors to borrow.</p>
+      </div>
+      <div class="small-12 medium-3 columns">
+        <i class="fa fa-battery-full" aria-hidden="true"></i>
+        <!-- Add an image here  -->
+        <h4 class="marketing-site-features-title">Step 4</h4>
+        <p class="marketing-site-features-desc">Enjoy your loan or the love from your neighbors!</p>
+        <a href="create.html" class="button">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="photo-container"></div>
+  <!-- Pictures of listings that will populate with real ones when the user enters their key? or hide until they enter the key? -->
+
+  <!-- <div id="listings">
+      <div class="featured-image-block-grid">
+        <div class="featured-image-block-grid-header small-10 medium-8 large-7 columns text-center">
+          <h2>Your Listings</h2>
+          <p>Take a look at some of the listings available near you.</p>
         </div>
 
-
-    <header class="subnav-hero-section">
-        <img src="./assets/Images/Logo.png" width="75px" height="75px">
-        <h1 class="subnav-hero-headline"> Neighbor Share <small> by Eight </small></h1>
-        <ul class="subnav-hero-subnav">
-          <li><a href="#Home">Home</a></li>
-          <!-- <li><a href="#">About Us</a></li> -->
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#review">Reviews</a></li>
-          <li><a href="create.html">Get Started</a></li>
-        </ul>
-
-       
- 
-    </header>
-
-    <!-- Maybe some graphics/diagram with a quick overview of how the page works? -->
-    <div class="marketing-site-features">
-        <h2 class="marketing-site-features-headline">Neighbor Share: Your Community, Your Resources, Your Events—Simplify, Connect, and Borrow for a Stronger Neighborhood</h2>
-        <p class="marketing-site-features-subheadline subheader"></p>
-        <div class="row">
-          <div class="small-12 medium-3 columns">
-            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
-            <!-- Add an image here  -->
-            <h4 class="marketing-site-features-title">Step 1</h4>
-            <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <div class="row large-up-4 small-up-2">
+          <div class="featured-image-block column">
+            <a href="#">
+              <img src="https://unsplash.it/600/440?image=899" />
+              <p class="text-center featured-image-block-title">New York</p>
+            </a>
           </div>
-          <div class="small-12 medium-3 columns">
-            <i class="fa fa-angellist" aria-hidden="true"></i>
-            <!-- Add an image here  -->
-            <h4 class="marketing-site-features-title">Step 2 </h4>
-            <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+          <div class="featured-image-block column">
+            <a href="#">
+              <img src="https://unsplash.it/600/440?image=693" />
+              <p class="text-center featured-image-block-title">San Francisco</p>
+            </a>
           </div>
-          <div class="small-12 medium-3 columns">
-            <i class="fa fa-bullseye" aria-hidden="true"></i>
-            <!-- Add an image here  -->
-            <h4 class="marketing-site-features-title">Step 3</h4>
-            <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+          <div class="featured-image-block column">
+            <a href="#">
+              <img src="https://unsplash.it/600/440?image=452" />
+              <p class="text-center featured-image-block-title">Las Vegas</p>
+            </a>
           </div>
-          <div class="small-12 medium-3 columns">
-            <i class="fa fa-battery-full" aria-hidden="true"></i>
-            <!-- Add an image here  -->
-            <h4 class="marketing-site-features-title">Step 4</h4>
-            <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <a href="create.html" class="button">Get Started</a>
+
+          <div class="featured-image-block column">
+            <a href="#">
+              <img src="https://unsplash.it/600/440?image=792" />
+              <p class="text-center featured-image-block-title">Sacramento</p>
+            </a>
+          </div>
+
+          <div class="featured-image-block column">
+            <a href="#">
+              <img src="https://unsplash.it/600/440?image=667" />
+              <p class="text-center featured-image-block-title">Los Angeles</p>
+            </a>
+          </div>
+
+          <div class="featured-image-block column">
+            <a href="#">
+              <img src="https://unsplash.it/600/440?image=249" />
+              <p class="text-center featured-image-block-title">Chicago</p>
+            </a>
+          </div>
+
+          <div class="featured-image-block column">
+            <a href="#">
+              <img src="https://unsplash.it/600/440?image=382" />
+              <p class="text-center featured-image-block-title">Boston</p>
+            </a>
+          </div>
+
+          <div class="featured-image-block column">
+            <a href="#">
+              <img src="https://unsplash.it/600/440?image=1075" />
+              <p class="text-center featured-image-block-title">Seattle</p>
+            </a>
           </div>
         </div>
       </div>
+    </div> -->
 
-    <main>
-        <section id="home">
-            <!-- This h2 will be a brief description of our "app" or "website"-->
+  <section id="faq">
+    <h4>Frequently Asked Questions</h4>
+    <!-- So I used <details> and <summary> to create the FAQ section. <detail> is to represent a disclosure widget. The user can expand or collapse-->
+    <!-- <detail> is to represent a disclosure widget. The user can expand or collapse-->
+    <!-- <summary> When the user clicks on the summary, the answer will be visible-->
+    <!-- If we don't like this style we can always try a different style-->
+    <details>
+      <summary>How does Neighbor Share ensure the safety and security of transactions?</summary>
+      <p>Neighbor Share prioritizes safety by allowing users to communicate through the platform's messaging system.
+        It's recommended to arrange meetings in public places and adhere to community guidelines.
+        Additionally, user profiles and reviews contribute to building a trustworthy neighborhood network.</p>
+    </details>
 
-            <!-- <h2>Neighbor Share: Your Community, Your Resources, Your Events—Simplify, Connect, and Borrow for a Stronger Neighborhood</h2> --> 
-           
+    <details>
+      <summary>What if an item is damaged during the borrowing period?</summary>
+      <p>In the unfortunate event of damage, communicate with the neighbor through the platform's messaging system
+        to discuss the situation.
+        Neighbor Share encourages open communication and collaborative problem-solving. If a resolution cannot be
+        reached, refer to the community guidelines for guidance.</p>
+    </details>
 
-            <!-- I created a "get started button" under the description of our page so users can instantly jump to the get started page."-->
-            <!-- <a href="create.html" class="button">Get Started</a> -->
-            <!-- For now I'm using the "#" because we don't have any pictures-->
-        </section> 
+    <details>
+      <summary>Can I lend items for a fee on Neighbor Share?</summary>
+      <p>Neighbor Share promotes a culture of sharing and community support.
+        While lending items for free is encouraged, if you feel that a small fee is appropriate for certain items,
+        it's important to communicate this transparently with your neighbors.
+        However, keep in mind that the primary goal is to foster a sense of community and reduce material
+        consumption.</p>
+    </details>
+  </section>
 
-        <!-- <section class="pictures">
-            Pictures of our website using carousel
-            <div class="carousel">
-                <button class="carousel-button-next">&rarr;</button>
-                <button class="carousel-button-prev">&larr;</button>
-                <ul>
-                    <li class="slide">
-                        <img src="#" alt="random picture">
-                    </li>
-                    <li class="slide">
-                        <img src="#" alt="random picture">
-                    </li>
-                    <li class="slide">
-                        <img src="#" alt="random picture">
-                    </li>
-                </ul>
+  <!-- testimonial slider code -->
+
+  <div class="orbit testimonial-slider-container" role="region" aria-label="testimonial-slider" data-orbit>
+    <ul class="orbit-container">
+      <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+      <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+
+      <!-- content slide 1 -->
+
+      <li class="is-active orbit-slide">
+        <div class="testimonial-slide row">
+          <div class="small-12 large-9 column">
+            <div class="row align-middle testimonial-slide-content">
+
+              <div class="small-12 medium-8 column testimonial-slide-text">
+                <p class="testimonial-slide-quotation">I love this platform! Borrowed a grill from a neighbor for a
+                  party I threw this past
+                  weekend. It was easy to navigate through the website and interacting with my own community makes
+                  the whole
+                  experience enjoyable. Will definitely use this website again!</p>
+                <div class="testimonial-slide-author-container">
+
+                  <p class="testimonial-slide-author-info">James D.<br><i class="subheader">San Jose, CA</i></p>
+                </div>
+              </div>
             </div>
-
-        </section> -->
-
-        <div id="listings">
-            <div class="featured-image-block-grid">
-                <div class="featured-image-block-grid-header small-10 medium-8 large-7 columns text-center">
-                  <h2>Your Listings</h2>
-                  <p>Take a look at some of the listings available near you.</p>
-                </div>
-                <div class="row large-up-4 small-up-2">
-                  <div class="featured-image-block column">
-                   <a href="#">
-                      <img src="https://unsplash.it/600/440?image=899" />
-                      <p class="text-center featured-image-block-title">New York</p>
-                    </a>
-                  </div>
-                  
-                  <div class="featured-image-block column">
-                   <a href="#">
-                      <img src="https://unsplash.it/600/440?image=693" />
-                      <p class="text-center featured-image-block-title">San Francisco</p>
-                    </a>
-                  </div>
-                  
-                  <div class="featured-image-block column">
-                   <a href="#">
-                      <img src="https://unsplash.it/600/440?image=452" />
-                      <p class="text-center featured-image-block-title">Las Vegas</p>
-                    </a>
-                  </div>
-                  
-                  <div class="featured-image-block column">
-                   <a href="#">
-                      <img src="https://unsplash.it/600/440?image=792" />
-                      <p class="text-center featured-image-block-title">Sacramento</p>
-                    </a>
-                  </div>
-                  
-                  <div class="featured-image-block column">
-                   <a href="#">
-                      <img src="https://unsplash.it/600/440?image=667" />
-                      <p class="text-center featured-image-block-title">Los Angeles</p>
-                    </a>
-                  </div>
-                
-                  <div class="featured-image-block column">
-                   <a href="#">
-                      <img src="https://unsplash.it/600/440?image=249" />
-                      <p class="text-center featured-image-block-title">Chicago</p>
-                    </a>
-                  </div>
-                  
-                  <div class="featured-image-block column">
-                   <a href="#">
-                      <img src="https://unsplash.it/600/440?image=382" />
-                      <p class="text-center featured-image-block-title">Boston</p>
-                    </a>
-                  </div>
-              
-                  <div class="featured-image-block column">
-                   <a href="#">
-                      <img src="https://unsplash.it/600/440?image=1075" />
-                      <p class="text-center featured-image-block-title">Seattle</p>
-                    </a>
-                  </div>
-                </div>
-              </div>              
+          </div>
         </div>
+      </li>
 
-       
+      <!--content slide 2 -->
 
-        <section id="faq">
-            <h2>Frequently Asked Questions</h2>
-                <!-- So I used <details> and <summary> to create the FAQ section. <detail> is to represent a disclosure widget. The user can expand or collapse-->
-                <!-- <detail> is to represent a disclosure widget. The user can expand or collapse-->
-                <!-- <summary> When the user clicks on the summary, the answer will be visible-->
-                <!-- If we don't like this style we can always try a different style-->
-                <details>
-                    <summary>How does Neighbor Share ensure the safety and security of transactions?</summary>
-                    <p>Neighbor Share prioritizes safety by allowing users to communicate through the platform's messaging system. 
-                        It's recommended to arrange meetings in public places and adhere to community guidelines. 
-                        Additionally, user profiles and reviews contribute to building a trustworthy neighborhood network.</p>
-                </details>
+      <li class="orbit-slide">
+        <div class="testimonial-slide row">
+          <div class="small-12 large-9 column">
+            <div class="row align-middle testimonial-slide-content">
 
-                <details> 
-                    <summary>What if an item is damaged during the borrowing period?</summary>
-                    <p>In the unfortunate event of damage, communicate with the neighbor through the platform's messaging system to discuss the situation. 
-                        Neighbor Share encourages open communication and collaborative problem-solving. 
+              <div class="small-12 medium-8 column testimonial-slide-text">
+                <p class="testimonial-slide-quotation">This platform is a game-changer. Lent out my hiking gear to a
+                  neighbor who needed it
+                  and the borrower returned everything in perfect condition. Highly recommend!</p>
+                <div class="testimonial-slide-author-container">
 
-                       
-
-                        If a resolution cannot be reached, refer to the community guidelines for guidance.</p>
-
-                </details>
-
-                <details>
-                    <summary>Can I lend items for a fee on Neighbor Share?</summary>
-                    <p>Neighbor Share promotes a culture of sharing and community support. 
-                        While lending items for free is encouraged, if you feel that a small fee is appropriate for certain items, 
-                        it's important to communicate this transparently with your neighbors. 
-                        However, keep in mind that the primary goal is to foster a sense of community and reduce material consumption.</p>
-                </details>
-        </section>
-
-        <section id="review">
-            <h2>Reviews/Comments</h2>
-            <div class="review-1">
-                <p class="reviewer">James D.</p>
-                <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-                <p class="review-text">"I love this platform! Borrowed a grill from a neighbor for a party I threw this past weekend. It was easy to navigate through the website and interacting with my own community makes the whole experience enjoyable. Will definitely use this website again!"</p>
+                  <p class="testimonial-slide-author-info">Emily R.<br><i class="subheader">Hayward, CA</i></p>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </li>
 
-            <div class="review-2">
-                <p class="reviewer">Emily R.</p>
-                <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                <p class="review-text">“This platform is a game-changer. Lent out my hiking gear to a neighbor who needed it and the borrower returned everything in perfect condition. Highly recommend!”</p>
-            </div>
+      <!-- content slide 3 -->
 
-            <div class="review-3">
-                <p class="reviewer">Christian A.</p>
-                <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                <p class="review-text">“A lifesaver for last-minute needs! Lent my fishing pole to a neighbor who went on a fishing trip. Being able to lend and borrow items to neighbors creates a bond that we didn't have before. Definitely going to use this platform again. Thank you Neighbor-Share!”</p>
+      <li class="orbit-slide">
+        <div class="testimonial-slide row">
+          <div class="small-12 large-9 column">
+            <div class="row align-middle testimonial-slide-content">
+
+              <div class="small-12 medium-8 column testimonial-slide-text">
+                <p class="testimonial-slide-quotation">A lifesaver for last-minute needs! I was able to borrow a
+                  tent for my son's soccer game and also lent my fishing pole to a neighbor who went on a
+                  fishing trip. Being able to lend and borrow items with neighbors creates a bond that we didn't
+                  have before.
+                  Definitely going to use this platform again. Thank you Neighbor-Share!</p>
+                <div class="testimonial-slide-author-container">
+
+                  <p class="testimonial-slide-author-info">Christian A.<br><i class="subheader">Portland, OR</i></p>
+                </div>
+              </div>
             </div>
-        </section>
-   
-    </main>
-    <!-- We can add more to the footer but for now this is all I have -->
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- slider close -->
+
+  <footer class="social-footer">
+    <div class="social-footer-left">
+      <p>Created by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span>
+    </div>
+    <div class="social-footer-icons">
+      <ul class="menu simple">
+        <li><a href="https://www.facebook.com/">facebook<i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.instagram.com/?hl=en">instagram<i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </li>
+        <li><a href="https://www.pinterest.com/">pinterest<i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/?lang=en">twitter<i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+  <!--
     <footer class="footer">
-        
-        <section class="about">
-            <p>Welcome to Neighbor-Share, a community platform built by coding students. Our goal is to connect and create relationships within community by lending and borrowing items.</p>
-            <p>Start sharing with your neighbors today and make your community even stronger! </p>
-        </section>
-        
-        <!-- This will take users back to the top -->
-        <section class="footer-home-button">
-            <a href="#home">Home</a>
-        </section>
+      <div class="footer-home-button">
+        <a href="#home">Back to the top</a>
+      </div>
+      <div id="group8">
+        <p>Created by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span>
+      </div>
     </footer>
-    
-</body>
-</html>
+  -->
 
+</body>
+
+</html>

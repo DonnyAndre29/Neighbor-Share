@@ -1,0 +1,23 @@
+:root {
+    --logo: 'Kalnia', serif;
+    --body: 'Poppins', sans-serif;
+    --script: 'Cookie', cursive;
+}
+
+body {
+    font-family: var(--body);
+}
+
+h3 {
+    font-family: var(--script);
+    text-align: center;
+}
+
+#logo {
+    font-family: var(--logo);
+    font-size: 28px;
+}
+
+#logo sub {
+    font-size: 32px;
+}
