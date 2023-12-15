@@ -72,7 +72,8 @@
       </div>
     </div>
   </div>
-
+  <input type="submit" id="generate" class="button secondary" onclick="writeKey()" value="Generate Key">
+  <span id="neighborkey"></span>
   <!-- User checks if they have a community already  -->
   <div class="marketing-site-content-section">
     <div class="marketing-site-content-section-block small-order-2 medium-order-1">
@@ -82,7 +83,7 @@
       <div class="input-group input-group-rounded">
         <input class="input-group-field" type="text" id="addressInput" placeholder="Enter your address">
         <div class="input-group-button">
-          <input type="submit" id="generate" class="button secondary" data-open="map" value="Search">
+          <input type="submit" class="button secondary" data-open="map" value="Search">
         </div>
       </div>
       <!-- <a href="#" class="round button small">learn more</a> -->
@@ -113,7 +114,7 @@ You will be able to borrow and lend all sorts of items exclusively with our neig
 Please feel free to share with anybody in the neighborhood!
             </textarea>
       <!-- need to override default event? -->
-      <textarea id="neighborKey"></textarea>
+
       <div id="share">
         <span class="material-symbols-outlined">
           content_copy

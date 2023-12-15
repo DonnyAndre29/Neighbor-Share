@@ -1,34 +1,37 @@
 
 function initMap() {
-   
+
    var storedLocation = localStorage.getItem('userLocation');
    var userLocation = storedLocation ? JSON.parse(storedLocation) : null;
+
 
    
    var mapContainer = document.getElementById('map');
     var map = new google.maps.Map(mapContainer, {
        zoom: 12
+
+  
    });
 
    // Check if there's a stored location
    if (userLocation) {
-       var initialLocation = {
-           lat: userLocation.latitude,
-           lng: userLocation.longitude
-       };
+      var initialLocation = {
+         lat: userLocation.latitude,
+         lng: userLocation.longitude
+      };
 
-       // Set the map center to the stored location
-       map.setCenter(initialLocation);
+      // Set the map center to the stored location
+      map.setCenter(initialLocation);
 
-       // Optionally, you can add a marker for the stored location
-       var marker = new google.maps.Marker({
-           position: initialLocation,
-           map: map,
-           title: userLocation.name
-       });
+      // Optionally, you can add a marker for the stored location
+      var marker = new google.maps.Marker({
+         position: initialLocation,
+         map: map,
+         title: userLocation.name
+      });
 
-       // You may also adjust the zoom level as needed
-       map.setZoom(17);
+      // You may also adjust the zoom level as needed
+      map.setZoom(17);
    }
 
    // Create a Places Autocomplete object for the search input field
@@ -53,12 +56,12 @@ function initMap() {
          address: place.formatted_address,
          latitude: place.geometry.location.lat(),
          longitude: place.geometry.location.lng()
-     };
+      };
 
-     // Convert the location data to a JSON string and store it in local storage
-     localStorage.setItem('userLocation', JSON.stringify(locationData));
+      // Convert the location data to a JSON string and store it in local storage
+      localStorage.setItem('userLocation', JSON.stringify(locationData));
 
-      
+
 
       // If the place has a geometry, center the map on it
       if (place.geometry.viewport) {
@@ -127,57 +130,54 @@ function copyToClipboard() {
 }
 
 // shows and hides filtered items
-$(".filter-simple-button").click(function() {
+$(".filter-simple-button").click(function () {
    var value = $(this).attr('data-filter');
-   if(value === "all") {
-     $('.filter-simple-item').show('1000');
+   if (value === "all") {
+      $('.filter-simple-item').show('1000');
    } else {
-     $(".filter-simple-item").not('.'+value).hide('3000');
-     $('.filter-simple-item').filter('.'+value).show('3000');
+      $(".filter-simple-item").not('.' + value).hide('3000');
+      $('.filter-simple-item').filter('.' + value).show('3000');
    }
- });
- 
- // changes active class on filter buttons
- $('.filter-simple-button').click(function () {
+});
+
+// changes active class on filter buttons
+$('.filter-simple-button').click(function () {
    $(this).siblings().removeClass('is-active');
    $(this).addClass('is-active');
- });
+});
 
- var generateBtn = document.querySelector("#generate");
-
- // Simple helper function to concantenate strings
+// Simple helper function to concantenate strings
 function concatString(x, y) {
    return x.concat(y);
- }
- 
- // Simple helper function to get random integer
- function getRandomInt(n) {
-   return Math.floor(Math.random() * n);
- }
+}
 
- function generateKey() {
+// Simple helper function to get random integer
+function getRandomInt(n) {
+   return Math.floor(Math.random() * n);
+}
+
+function generateKey() {
    const allLowercase = "abcdefghijklmnopqrstuvwxyz";
-  const allUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const allNumber = "0123456789";
-   let arr = allLowercase + allUppercase + allNumber;
-   let tempKey;
+   const allUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   const allNumber = "0123456789";
+   let arr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+   let tempKey = "";
    // How long should the unique ID be?
    let n = 8;
    for (let i = 0; i < n; i++) {
-     tempKey = concatString(tempKey, (arr[getRandomInt(arr.length)]));
-     console.log("Generating: " + tempKey)
+      tempKey = tempKey.concat(arr[getRandomInt(arr.length)]);
+      console.log("Generating: " + tempKey);
    }
    console.log("Generated neighbor key is: ", tempKey);
-   let temp = shuffle(tempKey);
-   console.log("Shuffled key is " + temp);
-   console.log("Key length is " + temp.length);
-   return temp;
- }
+   // let temp = shuffle(tempKey);
+   // console.log("Shuffled key is " + temp);
+   // console.log("Key length is " + temp.length);
+   return tempKey;
+}
 
- // Writes unique ID to the #neighborkey text box
+// Writes unique ID to the #neighborkey text box
 function writeKey() {
    let key = generateKey();
    document.querySelector("#neighborkey").textContent = key;
- }
- 
- 
+}
+
