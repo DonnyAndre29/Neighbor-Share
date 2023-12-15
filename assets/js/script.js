@@ -4,7 +4,9 @@ function initMap() {
    var storedLocation = localStorage.getItem('userLocation');
    var userLocation = storedLocation ? JSON.parse(storedLocation) : null;
 
-   var map = new google.maps.Map(document.getElementById('map'), {
+   
+   var mapContainer = document.getElementById('map');
+    var map = new google.maps.Map(mapContainer, {
        zoom: 12
    });
 

@@ -582,7 +582,14 @@ body{
  * that contains the map. 
  */
  #map {
+  width: 100%;
   height: 100%;
+}
+
+#map-container {
+  width: 500px;
+  height: 400px;
+  /* You can adjust the dimensions as needed */
 }
 
 /* 
