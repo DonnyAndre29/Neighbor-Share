@@ -1,10 +1,33 @@
 
 function initMap() {
-   // console.log("Maps JavaScript API loaded.");
+   
+   var storedLocation = localStorage.getItem('userLocation');
+   var userLocation = storedLocation ? JSON.parse(storedLocation) : null;
+
    var map = new google.maps.Map(document.getElementById('map'), {
-      center: { lat: 37.7749, lng: -122.4194 },
-      zoom: 12
+       zoom: 12
    });
+
+   // Check if there's a stored location
+   if (userLocation) {
+       var initialLocation = {
+           lat: userLocation.latitude,
+           lng: userLocation.longitude
+       };
+
+       // Set the map center to the stored location
+       map.setCenter(initialLocation);
+
+       // Optionally, you can add a marker for the stored location
+       var marker = new google.maps.Marker({
+           position: initialLocation,
+           map: map,
+           title: userLocation.name
+       });
+
+       // You may also adjust the zoom level as needed
+       map.setZoom(17);
+   }
 
    // Create a Places Autocomplete object for the search input field
    var input = document.getElementById('addressInput');
@@ -21,6 +44,19 @@ function initMap() {
          // User entered the name of a Place that was not suggested
          return;
       }
+
+      // Save the location information to local storage
+      var locationData = {
+         name: place.name,
+         address: place.formatted_address,
+         latitude: place.geometry.location.lat(),
+         longitude: place.geometry.location.lng()
+     };
+
+     // Convert the location data to a JSON string and store it in local storage
+     localStorage.setItem('userLocation', JSON.stringify(locationData));
+
+      
 
       // If the place has a geometry, center the map on it
       if (place.geometry.viewport) {
