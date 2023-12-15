@@ -32,8 +32,8 @@
     <ul class="subnav-hero-subnav">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#review">Reviews</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#review">Reviews</a></li>
       <li><a href="create.html">Get Started</a></li>
     </ul>
   </header>
@@ -73,18 +73,6 @@
     </div>
   </div>
 
-  <!-- Start of user inputting information  -->
-  <!-- <p>Before we start, let's see if your neighbors have set up a space for you yet!</p>
-    <p>Enter your address to search: -->
-  <!-- <input type="search" id="addressSearch" placeholder="123 Main Street, San Jose, CA" /> -->
-  <!-- <div class="input-group input-group-rounded">
-            <input class="input-group-field" type="search">
-            <div class="input-group-button">
-              <input type="submit" class="button secondary" value="Search">
-            </div>
-        </div>
-    </p> -->
-
   <!-- User checks if they have a community already  -->
   <div class="marketing-site-content-section">
     <div class="marketing-site-content-section-block small-order-2 medium-order-1">
@@ -94,7 +82,7 @@
       <div class="input-group input-group-rounded">
         <input class="input-group-field" type="text" id="addressInput" placeholder="Enter your address">
         <div class="input-group-button">
-          <input type="submit" class="button secondary" value="Search">
+          <input type="submit" id="generate" class="button secondary" data-open="map" value="Search">
         </div>
       </div>
       <!-- <a href="#" class="round button small">learn more</a> -->
@@ -106,79 +94,24 @@
 
   <div id="map"></div>
 
-  <section class="contact-us-section">
-    <div class="row medium-unstack">
-      <div class="columns contact-us-section-left">
-        <h1 class="contact-us-header">Create Your Space</h1>
-        <div class="responsive-embed">
-          <div id="map"></div>
-        </div>
-
-        <ul class="contact-us-list">
-          <li class="address">100 W Rincon Ave, Campbell CA 95008</li>
-          <li class="email"><a href="mailto:">hello@yeticave.com</a></li>
-          <li class="phone">
-            1 (408) 445 9978
-          </li>
-        </ul>
-      </div>
-      <div class="columns contact-us-section-right">
-        <h1 class="contact-us-header">Share with your Neighbors!</h1>
-        <form class="contact-us-form">
-          <input type="text" placeholder="Full name">
-          <input type="email" placeholder="Email">
-          <textarea name="message" id="" rows="12">Hi Neighbor! I just set up a new neighbor lending space at Neighbor Share. 
-
-            You will be able to borrow and lend all sorts of items exclusively with our neighbors. You can access it using the passcode below. 
-            
-            Please feel free to share with anybody in the neighborhood!
-            
-                        happy-82ay9j5</textarea>
-          <div class="contact-us-form-actions">
-            <input type="submit" class="button" value="Send it" />
-            <div>
-              <label for="FileUpload" class="button contact-us-file-button">Attach Files</label>
-              <input type="file" id="FileUpload" class="show-for-sr">
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-
-
-
+  <p><button class="button" data-open="spaceShare">Share with your Neighbors</button></p>
   <!-- if space is there already, redirect to index.html with the unique id attached to display the map and loan items-->
   <!-- if no results found, then prompt user to create a space using modal? -->
-  <div class="modal">
-    <!-- <h2>Create Your Space</h2>
-        <div id="userFlow">
-            <span class="material-symbols-outlined">mood_bad</span>
-            Have a party coming up and you need to source a lot of items?<br>
-            <span class="material-symbols-outlined">emoji_objects</span>
-            What if - instead of buying or renting all of those items - you could just reach out to your neighbors to
-            see if they have what you need?<br>
-            <span class="material-symbols-outlined">crowdsource</span>
-            Connect with your neighbors and create an active, engaged community that helps each other and reduces
-            material consumption at the same time!
-            <span class="material-symbols-outlined">diversity_1</span>
-
-        </div> -->
-    <!-- Map image centered on #addressSearch with an option for the user to choose radius?? ie 1 mile, 5 miles, 25 miles -- maybe keep it at a default 5 miles or something for the "mvp" -->
-    <!-- I was hoping the user could set boundaries but it's not looking likely! -->
-    <!-- Map parameters/API URL get saved as an object to client side storage with a unique ID attached -->
+  <div class="reveal" id="spaceShare" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
     <h3>Share with your Neighbors!</h3>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
     <form>
       <textarea rows="13" cols="50">
-Hi Neighbor! This is [Your name]! I just set up a new neighbor lending space at Neighbor Share. 
+Hi Neighbor! I just set up a new neighbor lending space at Neighbor Share. 
 
 You will be able to borrow and lend all sorts of items exclusively with our neighbors. You can access it using the passcode below. 
 
 Please feel free to share with anybody in the neighborhood!
-
-            happy-82ay9j5
             </textarea>
+      <!-- need to override default event? -->
+      <textarea id="neighborKey"></textarea>
       <div id="share">
         <span class="material-symbols-outlined">
           content_copy
@@ -190,75 +123,27 @@ Please feel free to share with anybody in the neighborhood!
     </form>
   </div>
 
-  <!-- For the new stuff -->
-  <section class="product-feature-section">
-    <div class="product-feature-section-outer">
-      <h4 class="product-feature-section-headline">Create Your Space <div>
-      </h4>
-
-      <div class="product-feature-section-inner">
-
-        <div class="product-feature-section-feature top-left">
-          <i class="fa fa-shield" aria-hidden="true"></i>
-          <div>
-            <p class="feature-title"><span class="material-symbols-outlined">mood_bad</span></p>
-            <p class="feature-desc">Feeling stressed because you have a party coming up and you need to source a lot of
-              items?</p>
-          </div>
-        </div>
-
-        <div class="product-feature-section-feature top-right">
-          <i class="fa fa-heart" aria-hidden="true"></i>
-          <div>
-            <p class="feature-title"> <span class="material-symbols-outlined">emoji_objects</span></p>
-            <p class="feature-desc"> What if - instead of buying or renting all of those items - you could just reach
-              out to your neighbors to
-              see if they have what you need?</p>
-          </div>
-        </div>
-
-        <div class="product-feature-section-feature bottom-left">
-          <i class="fa fa-coffee" aria-hidden="true"></i>
-          <div>
-            <p class="feature-title" class="c"> <span class="material-symbols-outlined">crowdsource</span> </p>
-            <p class="feature-desc"> Connect with your neighbors and create an active, engaged community that helps each
-              other and reduces
-              material consumption at the same time!</p>
-          </div>
-        </div>
-
-        <div class="product-feature-section-feature bottom-right">
-          <i class="fa fa-map-marker" aria-hidden="true"></i>
-          <div>
-            <p class="feature-title"> <span class="material-symbols-outlined">crowdsource</span> </p>
-            <p class="feature-desc">Congratulations! You've successfully connected with your neighbors and found the
-              items you needed for your upcoming party.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-  <footer class="footer">
-
-    <section class="about">
-      <p>Welcome to Neighbor-Share, a community platform built by coding students. Our goal is to connect and create
-        relationships within community by lending and borrowing items.</p>
-      <p>Start sharing with your neighbors today and make your community even stronger! </p>
-    </section>
-
-    <!-- This will take users back to the top -->
-    <section class="footer-home-button">
-      <a href="#home">Home</a>
-    </section>
-    <div id="group8">
+  <footer class="social-footer">
+    <div class="social-footer-left">
       <p>Created by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span>
+    </div>
+    <div class="social-footer-icons">
+      <ul class="menu simple">
+        <li><a href="https://www.facebook.com/">link<i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.instagram.com/?hl=en">link<i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </li>
+        <li><a href="https://www.pinterest.com/">link<i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+        <li><a href="#">back to top<i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      </ul>
     </div>
   </footer>
 
+  <!-- JQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Compressed Foundation JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"
+    crossorigin="anonymous"></script>
+  <!-- Our javascript file -->
   <script src="./assets/js/script.js"></script>
 </body>
 

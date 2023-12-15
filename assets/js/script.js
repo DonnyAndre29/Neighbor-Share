@@ -31,6 +31,7 @@ function initMap() {
       }
    });
 }
+
 document.addEventListener("DOMContentLoaded", function () {
    const apiKey = 'f855e062782300ad36a1dc15d727ecff';
    const userId = "199652929@N05"; // Your Flickr user ID
@@ -71,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //   window.initMap = initMap;
+
 function copyToClipboard() {
    // Get the text field
    var copyText = document.getElementById("myInput");
@@ -85,3 +87,59 @@ function copyToClipboard() {
    // Alert the copied text
    alert("Copied the text: " + copyText.value);
 }
+
+// shows and hides filtered items
+$(".filter-simple-button").click(function() {
+   var value = $(this).attr('data-filter');
+   if(value === "all") {
+     $('.filter-simple-item').show('1000');
+   } else {
+     $(".filter-simple-item").not('.'+value).hide('3000');
+     $('.filter-simple-item').filter('.'+value).show('3000');
+   }
+ });
+ 
+ // changes active class on filter buttons
+ $('.filter-simple-button').click(function () {
+   $(this).siblings().removeClass('is-active');
+   $(this).addClass('is-active');
+ });
+
+ var generateBtn = document.querySelector("#generate");
+
+ // Simple helper function to concantenate strings
+function concatString(x, y) {
+   return x.concat(y);
+ }
+ 
+ // Simple helper function to get random integer
+ function getRandomInt(n) {
+   return Math.floor(Math.random() * n);
+ }
+
+ function generateKey() {
+   const allLowercase = "abcdefghijklmnopqrstuvwxyz";
+  const allUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const allNumber = "0123456789";
+   let arr = allLowercase + allUppercase + allNumber;
+   let tempKey;
+   // How long should the unique ID be?
+   let n = 8;
+   for (let i = 0; i < n; i++) {
+     tempKey = concatString(tempKey, (arr[getRandomInt(arr.length)]));
+     console.log("Generating: " + tempKey)
+   }
+   console.log("Generated neighbor key is: ", tempKey);
+   let temp = shuffle(tempKey);
+   console.log("Shuffled key is " + temp);
+   console.log("Key length is " + temp.length);
+   return temp;
+ }
+
+ // Writes unique ID to the #neighborkey text box
+function writeKey() {
+   let key = generateKey();
+   document.querySelector("#neighborkey").textContent = key;
+ }
+ 
+ 
