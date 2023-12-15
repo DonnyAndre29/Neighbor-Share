@@ -22,6 +22,19 @@ function initMap() {
          return;
       }
 
+      // Save the location information to local storage
+      var locationData = {
+         name: place.name,
+         address: place.formatted_address,
+         latitude: place.geometry.location.lat(),
+         longitude: place.geometry.location.lng()
+     };
+
+     // Convert the location data to a JSON string and store it in local storage
+     localStorage.setItem('userLocation', JSON.stringify(locationData));
+
+      
+
       // If the place has a geometry, center the map on it
       if (place.geometry.viewport) {
          map.fitBounds(place.geometry.viewport);
