@@ -22,6 +22,44 @@ h3 {
     font-size: 32px;
 }
 
+<<<<<<< HEAD
+.row.small-up-2.medium-up-3.large-up-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+.row.small-up-2.medium-up-3.large-up-4::before {
+    content: none;
+}
+  
+  .column.column-block {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  } */
+  
+  img {
+    width: 150px; /* Adjust this value as needed */
+    height: 150px; /* Adjust this value as needed */
+    display: block;
+}
+
+#Pictures {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.column column-block filter-simple-item events {
+    width: fit-content;
+=======
 .indent, 
 .indent-2, 
 .indent-3 {
@@ -33,4 +71,5 @@ h3 {
 .point-2,
 .point-3 {
     cursor: pointer;
+>>>>>>> origin/main
 }
