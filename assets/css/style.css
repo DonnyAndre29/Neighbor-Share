@@ -21,3 +21,16 @@ h3 {
 #logo sub {
     font-size: 32px;
 }
+
+.indent, 
+.indent-2, 
+.indent-3 {
+    color: darkblue;
+}
+
+
+.point,
+.point-2,
+.point-3 {
+    cursor: pointer;
+}
