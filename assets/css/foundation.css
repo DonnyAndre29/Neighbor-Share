@@ -57,6 +57,16 @@ body{
   }
 
 /* For the search bar  */
+
+.input-group-button, .input-group-field, .input-group-label {
+  display: inline-block;
+}
+
+.input-group-button {
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+
 .input-group-rounded .input-group-field {
     border-radius: 5000px 0 0 5000px;
     padding-left: 1rem;
@@ -173,7 +183,7 @@ body{
   }
   
   .marketing-site-content-section-block-header {
-    font-size: 24px;
+    font-size: 3rem;
   }
   
   .marketing-site-content-section-block-subheader {
@@ -582,7 +592,14 @@ body{
  * that contains the map. 
  */
  #map {
+  width: 100%;
   height: 100%;
+}
+
+#map-container {
+  width: 500px;
+  height: 400px;
+  /* You can adjust the dimensions as needed */
 }
 
 /* 

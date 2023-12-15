@@ -72,7 +72,8 @@
       </div>
     </div>
   </div>
-
+  <input type="submit" id="generate" class="button secondary" onclick="writeKey()" value="Generate Key">
+  <span id="neighborkey"></span>
   <!-- User checks if they have a community already  -->
   <div class="marketing-site-content-section">
     <div class="marketing-site-content-section-block small-order-2 medium-order-1">
@@ -82,17 +83,19 @@
       <div class="input-group input-group-rounded">
         <input class="input-group-field" type="text" id="addressInput" placeholder="Enter your address">
         <div class="input-group-button">
-          <input type="submit" id="generate" class="button secondary" data-open="map" value="Search">
+          <input type="submit" class="button secondary" data-open="map" value="Search">
         </div>
       </div>
       <!-- <a href="#" class="round button small">learn more</a> -->
     </div>
-    <!-- <div class="marketing-site-content-section-img small-order-1 medium-order-2">
-          <img src="https://images.pexels.com/photos/300857/pexels-photo-300857.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" />
-        </div> -->
+    <div class="marketing-site-content-section-img small-order-1 medium-order-2">
+      <div id="map-container">
+          <!-- <img src="https://images.pexels.com/photos/300857/pexels-photo-300857.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" /> -->
+          <div id="map"></div>
+        </div>
+      </div>
   </div>
 
-  <div id="map"></div>
 
   <p><button class="button" data-open="spaceShare">Share with your Neighbors</button></p>
   <!-- if space is there already, redirect to index.html with the unique id attached to display the map and loan items-->
@@ -111,7 +114,7 @@ You will be able to borrow and lend all sorts of items exclusively with our neig
 Please feel free to share with anybody in the neighborhood!
             </textarea>
       <!-- need to override default event? -->
-      <textarea id="neighborKey"></textarea>
+
       <div id="share">
         <span class="material-symbols-outlined">
           content_copy
