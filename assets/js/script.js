@@ -93,7 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // You can customize this part to add more information or styling
             const photoDiv = document.createElement('div');
             /*photoDiv.addClass("featured-image-block column");*/
-            photoDiv.appendChild(imgElement);
+            // photoDiv.appendChild(imgElement);
+            console.log(photoUrl)
+            document.getElementById('Pictures').appendChild(imgElement) 
             /*console.log(photoDiv);
             const pClass = document.createElement('p');
             pClass.addClass("text-center featured-image-block-title");
