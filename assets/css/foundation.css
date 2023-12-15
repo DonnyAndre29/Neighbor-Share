@@ -300,7 +300,32 @@ body{
   .product-feature-section-feature .feature-title{
     text-align: center;
   }
-  
+
+/* styling for content filter for photo listings */
+
+.filter-simple .button-group {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.filter-simple .filter-simple-button.hollow.is-active, .filter-simple .filter-simple-button.hollow:focus, .filter-simple .filter-simple-button.hollow:active {
+  background-color: #1779ba;
+  color: #fefefe;
+}
+
+.button-group.round :first-child {
+  border-radius: 5000px 0 0 5000px;
+}
+
+.button-group.round :last-child {
+  border-radius: 0 5000px 5000px 0;
+}
+
+.column-block {
+  margin-bottom: 30px;
+}
+
   /* styling for listings on index.html page */
 
 .featured-image-block-grid-header {
@@ -408,8 +433,8 @@ body{
     margin-left: 1rem;
   }
 }
-/* Share with Neighbors modal */
 
+/* Share with Neighbors modal */
 
 .contact-us-section {
   padding: 2rem;
@@ -521,6 +546,7 @@ body{
 
 .social-footer {
   padding: 1rem;
+  color: white;
   background: #8a8a8a;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -545,6 +571,10 @@ body{
 .social-footer .social-footer-icons .fa:hover {
   color: #4a4a4a;
   transition: color 0.3s ease-in;
+}
+
+.social-footer a {
+  color: white;
 }
 
 /* 

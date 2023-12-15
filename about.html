@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Google icons library -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- FontAwesome icons library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <!-- Link to Google Fonts API - can be altered to include more fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Cookie&family=Kalnia:wght@100&family=Poppins:wght@200&display=swap"
@@ -24,35 +26,86 @@
         <h1 class="subnav-hero-headline"> Neighbor Share</h1>
         <div>by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span></div>
         <ul class="subnav-hero-subnav">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#review">Reviews</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#review">Reviews</a></li>
             <li><a href="create.html">Get Started</a></li>
         </ul>
     </header>
 
     <section class="content">
-        <p>Welcome to Neighbor-Share, a community platform built by coding students. Our goal is to connect and create
-            relationships within community by lending and borrowing items.</p>
-        <p>Start sharing with your neighbors today and make your community even stronger! </p>
+        <h3>Welcome to Neighbor-Share, a community platform built by coding students. <br> Our goal is to connect and create
+            relationships within community by lending and borrowing items.<br>
+    Start sharing with your neighbors today and make your community even stronger!</h3>
     </section>
 
-    <div id="photo-container"></div>
+    <!-- About us -->
+  <section class="product-feature-section">
+    <div class="product-feature-section-outer">
+      <h4 class="product-feature-section-headline">Who We Are<div>
+      </h4>
 
-    <!-- brief sections for each of the team members that pulls their github profile picture and repos? -->
+      <div class="product-feature-section-inner">
+
+        <div class="product-feature-section-feature top-left">
+          <i class="fa fa-shield" aria-hidden="true"></i>
+          <div>
+            <p class="feature-title">Benita Isaac</p>
+            <p class="feature-desc">your content here</p>
+          </div>
+        </div>
+
+        <div class="product-feature-section-feature top-right">
+          <i class="fa fa-shield" aria-hidden="true"></i>
+          <div>
+            <p class="feature-title">Don Andre Clark</p>
+            <p class="feature-desc">your content here</p>
+          </div>
+        </div>
+
+        <div class="product-feature-section-feature bottom-left">
+          <i class="fa fa-shield" aria-hidden="true"></i>
+          <div>
+            <p class="feature-title" class="c">Keri Sen</p>
+            <p class="feature-desc">your content here</p>
+          </div>
+        </div>
+
+        <div class="product-feature-section-feature bottom-right">
+          <i class="fa fa-shield" aria-hidden="true"></i>
+          <div>
+            <p class="feature-title">Justin Hill</p>
+            <p class="feature-desc">your content here</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
     <footer>
 
         <!-- This will take users back to the top -->
-        <section class="footer-home-button">
-            <a href="#home">Home</a>
-        </section>
-        <div id="group8">
-            <p>Created by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span>
-        </div>
-    </footer>
+        <footer class="social-footer">
+            <div class="social-footer-left">
+              <p>Created by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span>
+            </div>
+            <div class="social-footer-icons">
+              <ul class="menu simple">
+                <li><a href="https://www.facebook.com/">link<i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/?hl=en">link<i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="https://www.pinterest.com/">link<i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                <li><a href="https://twitter.com/?lang=en">link<i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <!-- Compressed Foundation JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"
+  crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 
