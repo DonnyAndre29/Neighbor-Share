@@ -4,8 +4,13 @@ function initMap() {
    var storedLocation = localStorage.getItem('userLocation');
    var userLocation = storedLocation ? JSON.parse(storedLocation) : null;
 
-   var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 12
+
+   
+   var mapContainer = document.getElementById('map');
+    var map = new google.maps.Map(mapContainer, {
+       zoom: 12
+
+  
    });
 
    // Check if there's a stored location
