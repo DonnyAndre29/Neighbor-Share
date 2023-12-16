@@ -182,4 +182,30 @@ function writeKey() {
    let key = generateKey();
    document.querySelector("#neighborkey").textContent = key;
 }
+   
+  
+
+// Fetch user information from GitHub API for about.html
+// Replace 'YOUR_USERNAME' with the GitHub username you want to fetch the avatar for
+const username = 'kerilsen';
+
+// GitHub API endpoint to get user information
+const apiUrl = `https://api.github.com/users/${username}`;
+fetch(apiUrl)
+.then(response => {
+    if (!response.ok) {
+        throw new Error(`GitHub API request failed with status ${response.status}`);
+    }
+    return response.json();
+})
+.then(data => {
+    // Get the avatar URL from the response data
+    const avatarUrl = data.avatar_url;
+
+    // Display the avatar in the img element
+    document.getElementById('avatar').src = avatarUrl;
+})
+.catch(error => {
+    console.error('Error fetching GitHub user data:', error);
+});
 
