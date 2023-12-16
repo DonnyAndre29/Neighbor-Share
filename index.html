@@ -9,9 +9,12 @@
   <!-- Link to Google Fonts API - url can be altered to include more fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Kalnia:wght@100&family=Poppins:wght@200&display=swap" rel="stylesheet">
-  <link href="./assets/css/foundation.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cookie&family=Kalnia:wght@100&family=Poppins:wght@200&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/foundation.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
   <title>Neighbor Share</title>
 </head>
 
@@ -35,7 +38,7 @@
     <h3>Simplify,
       Connect, and Borrow for a Stronger Neighborhood</h3>
     <p class="marketing-site-features-subheadline subheader"></p>
-    <div class="row"> 
+    <div class="row">
       <div class="small-12 medium-3 columns">
         <i class="fa fa-snowflake-o" aria-hidden="true"></i>
         <!-- Add an image here  -->
@@ -116,12 +119,12 @@
     </div> -->
   </section>
 
-    <section id="faq" align="center">
-      <h4>Frequently Asked Questions</h4>
+  <section id="faq" align="center">
+    <h4>Frequently Asked Questions</h4>
     <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
-      <li class="accordion-item is-active" data-accordion-item>
+      <li class="accordion-item" data-accordion-item>
         <a href="#" class="accordion-title">How does Neighbor Share ensure the safety and security of transactions?</a>
-        <div class="accordion-content" data-tab-content >
+        <div class="accordion-content" data-tab-content>
           <p>Neighbor Share prioritizes safety by allowing users to communicate through the platform's messaging system.
             It's recommended to arrange meetings in public places and adhere to community guidelines.
             Additionally, user profiles and reviews contribute to building a trustworthy neighborhood network.</p>
@@ -139,8 +142,10 @@
       <li class="accordion-item" data-accordion-item>
         <a href="#" class="accordion-title">Can I lend items for a fee on Neighbor Share?</a>
         <div class="accordion-content" data-tab-content>
-          Type your name!
-          <input type="text">
+          <p>Neighbor Share promotes a culture of sharing and community support. While lending items for free is
+            encouraged, if you feel that a small fee is appropriate for certain items, it's important to communicate
+            this transparently with your neighbors. However, keep in mind that the primary goal is to foster a sense of
+            community and reduce material consumption.</p>
         </div>
       </li>
     </ul>
@@ -148,10 +153,10 @@
 
   <!-- testimonial slider code -->
 
-  <div class="orbit testimonial-slider-container" role="region" aria-label="testimonial-slider" data-orbit>
+  <div class="orbit testimonial-slider-container" id="review" role="region" aria-label="testimonial-slider" data-orbit>
     <ul class="orbit-container">
-      <!-- <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-      <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button> -->
+      <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+      <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
 
       <!-- content slide 1 -->
 
@@ -178,7 +183,7 @@
 
       <!--content slide 2 -->
 
-      <!-- <li class="orbit-slide">
+      <li class="orbit-slide">
         <div class="testimonial-slide row">
           <div class="small-12 large-9 column">
             <div class="row align-middle testimonial-slide-content">
@@ -195,11 +200,11 @@
             </div>
           </div>
         </div>
-      </li> -->
+      </li>
 
       <!-- content slide 3 -->
 
-      <!-- <li class="orbit-slide">
+      <li class="orbit-slide">
         <div class="testimonial-slide row">
           <div class="small-12 large-9 column">
             <div class="row align-middle testimonial-slide-content">
@@ -220,7 +225,7 @@
         </div>
       </li>
     </ul>
-  </div> -->
+  </div>
   <!-- slider close -->
 
 
@@ -251,15 +256,13 @@
     </footer>
   -->
 
-  
-  <!-- JQuery CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
-  <!-- Compressed Foundation JavaScript -->
- 
+  <script src="assets/js/vendor/jquery.js"></script>
+  <script src="assets/js/vendor/what-input.js"></script>
+  <script src="assets/js/vendor/foundation.js"></script>
+  <script src="assets/js/app.js"></script>
+
   <!-- Our javascript file -->
-  <script src="./assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>
 
 </body>
 
