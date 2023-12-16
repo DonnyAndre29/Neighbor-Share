@@ -10,6 +10,7 @@ function displayAddressConfirmation() {
    confirmationMessage.style.display = "block";
 }
 
+// Google maps initializing map function 
 function initMap() {
 
    var storedLocation = localStorage.getItem('userLocation');
@@ -84,6 +85,7 @@ function initMap() {
    });
 }
 
+//Event lisener for google maps 
 document.addEventListener("DOMContentLoaded", function () {
    const apiKey = 'f855e062782300ad36a1dc15d727ecff';
    const userId = "199652929@N05"; // Your Flickr user ID
@@ -124,8 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch(error => console.error('Error fetching data from Flickr API:', error));
 });
-
-//   window.initMap = initMap;
 
 function copyToClipboard() {
    // Get the text field
