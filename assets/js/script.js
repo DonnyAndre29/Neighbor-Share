@@ -1,3 +1,14 @@
+//Hide message confirmation upon loading page
+function hideAddressConfirmation(){
+   var confirmationMessage = document.getElementById('confirmation-message');
+   confirmationMessage.style.display ="none";
+}
+
+// Display confirmation message after user presses 'search'
+function displayAddressConfirmation() {
+   var confirmationMessage = document.getElementById('confirmation-message');
+   confirmationMessage.style.display = "block";
+}
 
 function initMap() {
 
@@ -71,11 +82,6 @@ function initMap() {
          map.setZoom(17);  // Zoom in to a specific level
       }
    });
-}
-
-//
-function displayAddressConfirmation() {
-   console.log("you've pressed search");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -187,4 +193,6 @@ function writeKey() {
    let key = generateKey();
    document.querySelector("#neighborkey").textContent = key;
 }
+
+hideAddressConfirmation();
 
