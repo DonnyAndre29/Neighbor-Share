@@ -73,6 +73,11 @@ function initMap() {
    });
 }
 
+//
+function displayAddressConfirmation() {
+   console.log("you've pressed search");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
    const apiKey = 'f855e062782300ad36a1dc15d727ecff';
    const userId = "199652929@N05"; // Your Flickr user ID
