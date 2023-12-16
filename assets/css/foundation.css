@@ -406,7 +406,7 @@ body{
 
 @media screen and (min-width: 40em) {
   .testimonial-slider-container .testimonial-slide-content {
-    padding: 1rem 4rem;
+    padding: 1rem 1rem;
   }
 }
 
@@ -415,7 +415,7 @@ body{
 }
 
 .testimonial-slider-container .testimonial-slide-text {
-  padding-left: 3rem;
+  padding-left: 1rem;
 }
 
 .testimonial-slider-container .testimonial-slide-quotation {
