@@ -1,7 +1,7 @@
 //Hide message confirmation upon loading page
-function hideAddressConfirmation(){
+function hideAddressConfirmation() {
    var confirmationMessage = document.getElementById('confirmation-message');
-   confirmationMessage.style.display ="none";
+   confirmationMessage.style.display = "none";
 }
 
 // Display confirmation message after user presses 'search'
@@ -17,12 +17,11 @@ function initMap() {
    var userLocation = storedLocation ? JSON.parse(storedLocation) : null;
 
 
-   
    var mapContainer = document.getElementById('map');
-    var map = new google.maps.Map(mapContainer, {
-       zoom: 12
+   var map = new google.maps.Map(mapContainer, {
+      zoom: 12
 
-  
+
    });
 
    // Check if there's a stored location
@@ -61,19 +60,18 @@ function initMap() {
          // User entered the name of a Place that was not suggested
          return;
       }
-
+      let neighborKey = generateKey();
       // Save the location information to local storage
       var locationData = {
          name: place.name,
          address: place.formatted_address,
          latitude: place.geometry.location.lat(),
-         longitude: place.geometry.location.lng()
+         longitude: place.geometry.location.lng(),
+         key: neighborKey
       };
 
       // Convert the location data to a JSON string and store it in local storage
       localStorage.setItem('userLocation', JSON.stringify(locationData));
-
-
 
       // If the place has a geometry, center the map on it
       if (place.geometry.viewport) {
@@ -85,7 +83,7 @@ function initMap() {
    });
 }
 
-//Event lisener for google maps 
+//Event listener for Flickr 
 document.addEventListener("DOMContentLoaded", function () {
    const apiKey = 'f855e062782300ad36a1dc15d727ecff';
    const userId = "199652929@N05"; // Your Flickr user ID
@@ -111,36 +109,15 @@ document.addEventListener("DOMContentLoaded", function () {
             // You can customize this part to add more information or styling
             const photoDiv = document.createElement('div');
             /*photoDiv.addClass("featured-image-block column");*/
-            // photoDiv.appendChild(imgElement);
+            photoDiv.appendChild(imgElement);
             console.log(photoUrl)
-            document.getElementById('Pictures').appendChild(imgElement) 
-            /*console.log(photoDiv);
-            const pClass = document.createElement('p');
-            pClass.addClass("text-center featured-image-block-title");
-            pClass.appendChild(photo.title);
-            photoDiv.appendChild(pClass);
-            console.log(photoDiv);*/
-
             photoContainer.appendChild(photoDiv);
          });
       })
       .catch(error => console.error('Error fetching data from Flickr API:', error));
 });
 
-function copyToClipboard() {
-   // Get the text field
-   var copyText = document.getElementById("myInput");
-
-   // Select the text field
-   copyText.select();
-   copyText.setSelectionRange(0, 99999); // For mobile devices
-
-   // Copy the text inside the text field
-   navigator.clipboard.writeText(copyText.value);
-
-   // Alert the copied text
-   alert("Copied the text: " + copyText.value);
-}
+/* Function that adds classes to pictures tagged as "tools" etc */
 
 // shows and hides filtered items
 $(".filter-simple-button").click(function () {
@@ -170,21 +147,15 @@ function getRandomInt(n) {
 }
 
 function generateKey() {
-   const allLowercase = "abcdefghijklmnopqrstuvwxyz";
-   const allUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-   const allNumber = "0123456789";
    let arr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
    let tempKey = "";
-   // How long should the unique ID be?
+   // Setting the unique ID at 8 character length
    let n = 8;
    for (let i = 0; i < n; i++) {
       tempKey = tempKey.concat(arr[getRandomInt(arr.length)]);
       console.log("Generating: " + tempKey);
    }
    console.log("Generated neighbor key is: ", tempKey);
-   // let temp = shuffle(tempKey);
-   // console.log("Shuffled key is " + temp);
-   // console.log("Key length is " + temp.length);
    return tempKey;
 }
 
@@ -193,32 +164,6 @@ function writeKey() {
    let key = generateKey();
    document.querySelector("#neighborkey").textContent = key;
 }
-   
-  
-
-// Fetch user information from GitHub API for about.html
-// Replace 'YOUR_USERNAME' with the GitHub username you want to fetch the avatar for
-const username = 'kerilsen';
-
-// GitHub API endpoint to get user information
-const apiUrl = `https://api.github.com/users/${username}`;
-fetch(apiUrl)
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`GitHub API request failed with status ${response.status}`);
-    }
-    return response.json();
-})
-.then(data => {
-    // Get the avatar URL from the response data
-    const avatarUrl = data.avatar_url;
-
-    // Display the avatar in the img element
-    document.getElementById('avatar').src = avatarUrl;
-})
-.catch(error => {
-    console.error('Error fetching GitHub user data:', error);
-});
 
 hideAddressConfirmation();
 

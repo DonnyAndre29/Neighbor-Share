@@ -4,22 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <!-- <link rel="stylesheet" href="assets/css/foundation.min.css"> -->
   <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
   <!-- Link to Google Fonts API - url can be altered to include more fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Kalnia:wght@100&family=Poppins:wght@200&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/foundation.css" >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cookie&family=Kalnia:wght@100&family=Poppins:wght@200&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/foundation.css">
   <link rel="stylesheet" href="assets/css/app.css">
   <link rel="stylesheet" href="assets/css/style.css" type="text/css">
   <title>Create Your Space</title>
- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <!-- <script type="module" src="./index.js"></script> -->
 </head>
 
 <body>
-
   <header class="subnav-hero-section">
     <img src="./assets/Images/Logo.png" width="75px" height="75px">
     <h1 class="subnav-hero-headline"> Neighbor Share</h1>
@@ -32,99 +34,90 @@
       <li><a href="create.html">Get Started</a></li>
     </ul>
   </header>
-
-  <div class="marketing-site-features">
-    <h2 class="marketing-site-features-headline">Neighbor Share: Your Community, Your Resources, Your Events</h2>
-    <h3>Simplify,
-      Connect, and Borrow for a Stronger Neighborhood</h3>
-    <p class="marketing-site-features-subheadline subheader"></p>
-    <div class="row">
-      <div class="small-12 medium-3 columns">
-        <i class="fa fa-snowflake-o" aria-hidden="true"></i>
-        <!-- Add an image here  -->
-        <h4 class="marketing-site-features-title">Step 1</h4>
-        <p class="marketing-site-features-desc">Enter your key <input type="text"></input> or <a
-            href="create.html">create your space</a></p>
-      </div>
-      <div class="small-12 medium-3 columns">
-        <i class="fa fa-angellist" aria-hidden="true"></i>
-        <!-- Add an image here  -->
-        <h4 class="marketing-site-features-title">Step 2 </h4>
-        <p class="marketing-site-features-desc">See and share your item listings for loan.</p>
-      </div>
-      <div class="small-12 medium-3 columns">
-        <i class="fa fa-bullseye" aria-hidden="true"></i>
-        <!-- Add an image here  -->
-        <h4 class="marketing-site-features-title">Step 3</h4>
-        <p class="marketing-site-features-desc">Contact your neighbors to borrow.</p>
-      </div>
-      <div class="small-12 medium-3 columns">
-        <i class="fa fa-battery-full" aria-hidden="true"></i>
-        <!-- Add an image here  -->
-        <h4 class="marketing-site-features-title">Step 4</h4>
-        <p class="marketing-site-features-desc">Enjoy your loan or the love from your neighbors!</p>
-        <a href="create.html" class="button">Get Started</a>
-      </div>
-    </div>
-  </div>
-  <input type="submit" id="generate" class="button secondary" onclick="writeKey()" value="Generate Key">
-  <span id="neighborkey"></span>
-  <!-- User checks if they have a community already  -->
-  <div class="marketing-site-content-section">
-    <div class="marketing-site-content-section-block small-order-2 medium-order-1">
-      <h3 class="marketing-site-content-section-block-header"> Before we start, let's see if you are 
-        eligible to have a Neighbor Share Account
-      </h3>
-      <p class="marketing-site-content-section-block-subheader subheader">Enter your address and press 'search' to verify your eligibility</p>
-      <div class="input-group input-group-rounded">
-        <input class="input-group-field" type="text" id="addressInput" placeholder="Enter your address">
-        <div class="input-group-button">
-          <input onclick="displayAddressConfirmation()" type="submit" class="button secondary" data-open="map" value="Search">
+  <div class="grid-container">
+    <div class="marketing-site-features">
+      <h2 class="marketing-site-features-headline">Neighbor Share: Your Community, Your Resources, Your Events</h2>
+      <h3>Simplify,
+        Connect, and Borrow for a Stronger Neighborhood</h3>
+      <p class="marketing-site-features-subheadline subheader"></p>
+      <div class="row">
+        <div class="small-12 medium-3 columns">
+          <h4 class="marketing-site-features-title">Step 1</h4>
+          <p class="marketing-site-features-desc">Enter your key <input id="key" type="text"></input> or <a
+              href="create.html">create your space</a></p>
         </div>
-        <div id="confirmation-message">
-          <p>Congrats! You are approved to set up a NeighborShare Account.</p>
+        <div class="small-12 medium-3 columns">
+          <h4 class="marketing-site-features-title">Step 2 </h4>
+          <p class="marketing-site-features-desc">See and share your item listings for loan.</p>
+        </div>
+        <div class="small-12 medium-3 columns">
+          <h4 class="marketing-site-features-title">Step 3</h4>
+          <p class="marketing-site-features-desc">Contact your neighbors to borrow.</p>
+        </div>
+        <div class="small-12 medium-3 columns">
+          <h4 class="marketing-site-features-title">Step 4</h4>
+          <p class="marketing-site-features-desc">Enjoy your loan or the love from your neighbors!</p>
+          <a href="create.html" class="button">Get Started</a>
         </div>
       </div>
-      <!-- <a href="#" class="round button small">learn more</a> -->
     </div>
-    <div class="marketing-site-content-section-img small-order-1 medium-order-2">
-      <div id="map-container">
+    <h3>Your Key:</h3> <h4><span id="key"></span></h4>
+    <input type="submit" id="generate" class="button secondary" onclick="writeKey()" value="Generate Key">
+    <!-- User checks if they have a community already  -->
+    <div class="marketing-site-content-section">
+      <div class="marketing-site-content-section-block small-order-2 medium-order-1">
+        <h3 class="marketing-site-content-section-block-header"> Before we start, let's see if you are
+          eligible to have a Neighbor Share Account
+        </h3>
+        <p class="marketing-site-content-section-block-subheader subheader">Enter your address and press 'search' to
+          verify your eligibility</p>
+        <div class="input-group input-group-rounded">
+          <input class="input-group-field" type="text" id="addressInput" placeholder="Enter your address">
+          <div class="input-group-button">
+            <input onclick="displayAddressConfirmation()" type="submit" class="button secondary" data-open="map"
+              value="Search">
+          </div>
+          <div id="confirmation-message">
+            <p>Congrats! You are approved to set up a NeighborShare Account.</p>
+          </div>
+        </div>
+        <!-- <a href="#" class="round button small">learn more</a> -->
+      </div>
+      <div class="marketing-site-content-section-img small-order-1 medium-order-2">
+        <div id="map-container">
           <!-- <img src="https://images.pexels.com/photos/300857/pexels-photo-300857.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" /> -->
           <div id="map"></div>
         </div>
       </div>
-  </div>
+    </div>
 
 
-  <p><button class="button" data-open="spaceShare">Share with your Neighbors</button></p>
-  <!-- if space is there already, redirect to index.html with the unique id attached to display the map and loan items-->
-  <!-- if no results found, then prompt user to create a space using modal? -->
-  <div class="reveal" id="spaceShare" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
-    <h3>Share with your Neighbors!</h3>
-    <button class="close-button" data-close aria-label="Close modal" type="button">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    <form>
-      <textarea rows="13" cols="50">
+    <p><button class="button" data-open="spaceShare">Share with your Neighbors</button></p>
+    <!-- if space is there already, redirect to index.html with the unique id attached to display the map and loan items-->
+    <!-- if no results found, then prompt user to create a space using modal? -->
+    <div class="reveal" id="spaceShare" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+      <h3>Share with your Neighbors!</h3>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <form>
+        <textarea id="myInput" rows="13" cols="50">
 Hi Neighbor! I just set up a new neighbor lending space at Neighbor Share. 
 
 You will be able to borrow and lend all sorts of items exclusively with our neighbors. You can access it using the passcode below. 
 
 Please feel free to share with anybody in the neighborhood!
             </textarea>
-      <!-- need to override default event? -->
+        <!-- need to override default event? -->
 
-      <div id="share">
-        <span class="material-symbols-outlined">
-          content_copy
-        </span>
-        <span class="material-symbols-outlined">
-          share
-        </span>
-      </div>
-    </form>
+        <div id="share">
+          <button class="button" id="copy" onclick="copyToClipboard()">
+            Copy
+            </span>
+        </div>
+      </form>
+    </div>
   </div>
-
   <footer class="social-footer">
     <div class="social-footer-left">
       <p>Created by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span>
@@ -140,12 +133,14 @@ Please feel free to share with anybody in the neighborhood!
     </div>
   </footer>
 
- <!-- Foundation JS files -->
+  <!-- Foundation JS files -->
   <script src="assets/js/vendor/jquery.js"></script>
   <script src="assets/js/vendor/what-input.js"></script>
   <script src="assets/js/vendor/foundation.js"></script>
-<!-- Google maps JavaScript -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Trh306y0-7X7pNuU9u_dTFrJhxK7mGI&libraries=places&callback=initMap" async defer></script>
+  <!-- Google maps JavaScript -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Trh306y0-7X7pNuU9u_dTFrJhxK7mGI&libraries=places&callback=initMap"
+    async defer></script>
   <script src="assets/js/app.js"></script>
   <!-- Our javascript file -->
   <script src="assets/js/script.js"></script>
