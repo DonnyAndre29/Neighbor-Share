@@ -4,16 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/foundation.css">
-  <!-- <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+  <!-- Link to Google Material Symbols API -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- Link to Google Fonts API - url can be altered to include more fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cookie&family=Kalnia:wght@100&family=Poppins:wght@200&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cookie&family=Kalnia:wght@500&family=Poppins:wght@200&display=swap"
     rel="stylesheet">
-
+  <link rel="stylesheet" href="assets/css/foundation.css">
   <link rel="stylesheet" href="assets/css/app.css">
   <link rel="stylesheet" href="assets/css/style.css" type="text/css">
   <title>Neighbor Share</title>
@@ -34,40 +33,47 @@
   </header>
 
   <!-- Quick step by step of how the site works -->
-  <h2>Neighbor Share: Your Community, Your Resources, Your Events</h2>
-  <h3>Simplify,
-    Connect, and Borrow for a Stronger Neighborhood</h3>
-  <p class="marketing-site-features-subheadline subheader"></p>
-  <div class="row">
-    <div class="small-12 medium-3 columns">
-      <i class="fa fa-snowflake-o" aria-hidden="true"></i>
-      <!-- Add an image here  -->
-      <h4 class="marketing-site-features-title">Step 1</h4>
-      <p class="marketing-site-features-desc">Enter your key <input type="text"></input> or <a href="create.html">create
-          your space</a></p>
-    </div>
-    <div class="small-12 medium-3 columns">
-      <i class="fa fa-angellist" aria-hidden="true"></i>
-      <!-- Add an image here  -->
-      <h4 class="marketing-site-features-title">Step 2 </h4>
-      <p class="marketing-site-features-desc">See and share your item listings for loan.</p>
-    </div>
-    <div class="small-12 medium-3 columns">
-      <i class="fa fa-bullseye" aria-hidden="true"></i>
-      <!-- Add an image here  -->
-      <h4 class="marketing-site-features-title">Step 3</h4>
-      <p class="marketing-site-features-desc">Contact your neighbors to borrow.</p>
-    </div>
-    <div class="small-12 medium-3 columns">
-      <i class="fa fa-battery-full" aria-hidden="true"></i>
-      <!-- Add an image here  -->
-      <h4 class="marketing-site-features-title">Step 4</h4>
-      <p class="marketing-site-features-desc">Enjoy your loan or the love from your neighbors!</p>
-      <a href="create.html" class="button">Get Started</a>
+  <div class="grid-container">
+    <h2>Neighbor Share: Your Community, Your Resources, Your Events</h2>
+    <h3>Simplify,
+      Connect, and Borrow for a Stronger Neighborhood</h3>
+    <div class="grid-x grid-margin-x small-up-2 medium-up-4">
+      <div class="cell">
+        <div class="card">
+          <div class="card-section">
+            <h4>Step 1</h4>
+            <p>Enter your key <input type="text"></input> or <a href="create.html">create
+                your space</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="card">
+          <div class="card-section">
+            <h4>Step 2</h4>
+            <p>See and share your item listings for loan.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="card">
+          <div class="card-section">
+            <h4>Step 3</h4>
+            <p>Contact your neighbors to borrow.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="card">
+          <div class="card-section">
+            <h4>Step 4</h4>
+            <p>Enjoy your loan or the love from your neighbors!</p>
+            <a href="create.html" class="button">Get Started</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-
   <!-- Pictures of listings that will populate with real ones when the user enters their key? or hide until they enter the key? -->
 
   <section class="filter-simple">
@@ -78,43 +84,6 @@
       <button class="button hollow filter-simple-button" data-filter="games">Games</button>
     </div>
     <div class="row small-up-2 medium-up-3 large-up-4" id="photo-container"></div>
-      <!-- <div class="column column-block filter-simple-item events">
-        <img src="https://spaceholder.cc/350x350" alt="" />
-      </div>
-      <div class="column column-block filter-simple-item events">
-        <img src="https://placeimg.com/350/350/nature" alt="" />
-      </div>
-      <div class="column column-block filter-simple-item tools">
-        <img src="https://placeimg.com/350/350/animals" alt="" />
-      </div>
-      <div class="column column-block filter-simple-item tools">
-        <img src="https://placeimg.com/350/350/animals" alt="" />
-      </div>
-      <div class="column column-block filter-simple-item tools">
-        <img src="https://placeimg.com/350/350/animals" alt="" />
-      </div>
-      <div class="column column-block filter-simple-item games">
-        <img src="https://placeimg.com/350/350/nature" alt="" />
-      </div>
-      <div class="column column-block filter-simple-item games">
-        <img src="https://placeimg.com/350/350/nature" alt="" />
-      </div>
-      <div class="column column-block filter-simple-item tools">
-        <img src="https://placeimg.com/350/350/animals" alt="" />
-      </div>
-      <div class="column column-block filter-simple-item games">
-        <img src="https://placeimg.com/350/350/nature" alt="" />
-      </div>
-      <div class="column column-block filter-simple-item tools">
-        <img src="https://placeimg.com/350/350/animals" alt="" />
-      </div>
-      <div class="column column-block filter-simple-item events">
-        <img src="https://spaceholder.cc/350x350" alt="" />
-      </div>
-      <div class="column column-block filter-simple-item events">
-        <img src="https://spaceholder.cc/350x350" alt="" />
-      </div>
-    </div> -->
   </section>
 
   <section id="faq" align="center">
@@ -151,6 +120,7 @@
       </li>
     </ul>
   </section>
+
 
   <!-- testimonial slider code -->
 
@@ -232,6 +202,9 @@
   <footer class="social-footer">
     <div class="social-footer-left">
       <p>Created by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span>
+        <span class="material-symbols-outlined">
+          copyright
+          </span>2023
     </div>
     <div class="social-footer-icons">
       <ul class="menu simple">
@@ -249,7 +222,8 @@
   <script src="assets/js/vendor/foundation.js"></script>
   <script src="assets/js/app.js"></script>
 
-  <!-- Our javascript file -->
+  <!-- Our javascript files -->
+  <script src="assets/js/photos.js"></script>
   <script src="assets/js/script.js"></script>
 
 </body>
