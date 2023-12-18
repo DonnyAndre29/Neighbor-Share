@@ -672,3 +672,8 @@ gmp-map {
   text-align: center;
   padding: 1rem;
 }
+
+/* Centering the neighbor key */
+h4{
+  text-align: center;
+} 
