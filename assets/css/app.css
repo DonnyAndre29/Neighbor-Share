@@ -80,7 +80,7 @@ body {
   font-size: 0.8rem;
 }
 
-/* Before we start search */
+/* Container for map and search bar */
 
 .marketing-site-content-section {
   display: -webkit-flex;
@@ -159,6 +159,7 @@ body {
   font-size: 23px;
 }
 
+/* For step 1-4 cards */
 .card {
   border: none;
 }
@@ -173,116 +174,6 @@ body {
 
 #userFlow {
   margin-bottom: 10px;
-}
-
-/* For the new stuff */
-
-.product-feature-section {
-  background: #e6e6e6;
-  padding: 1rem;
-}
-
-.product-feature-section-outer {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 100%;
-  margin: 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-@media print,
-screen and (min-width: 40em) {
-  .product-feature-section-outer {
-    max-width: 75%;
-  }
-}
-
-.product-feature-section-headline {
-  margin-bottom: 2rem;
-  text-align: center;
-  font-size: 3rem;
-}
-
-.product-feature-section-inner {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.product-feature-section-feature {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  padding: 1rem;
-  -webkit-flex: 1 0 50%;
-  -ms-flex: 1 0 50%;
-  flex: 1 0 50%;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.product-feature-section-feature.top-left {
-  border-right: 1px solid #cacaca;
-  border-bottom: 1px solid #cacaca;
-}
-
-.product-feature-section-feature.top-right {
-  border-bottom: 1px solid #cacaca;
-}
-
-.product-feature-section-feature.bottom-left {
-  border-right: 1px solid #cacaca;
-}
-
-.product-feature-section-feature .feature-title {
-  margin-bottom: 0;
-  line-height: 16px;
-  font-size: 0.875rem;
-}
-
-.product-feature-section-feature .feature-desc {
-  margin-bottom: 0;
-}
-
-.product-feature-section-feature .fa {
-  margin-right: 1.25rem;
-  font-size: 2rem;
-}
-
-@media print,
-screen and (min-width: 40em) {
-  .product-feature-section-feature {
-    padding: 2rem;
-    -webkit-flex: 1 0 50%;
-    -ms-flex: 1 0 50%;
-    flex: 1 0 50%;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-}
-
-.product-feature-section-feature .feature-title {
-  text-align: center;
 }
 
 /* styling for content filter for photo listings */
@@ -310,34 +201,6 @@ screen and (min-width: 40em) {
 
 .column-block {
   margin-bottom: 30px;
-}
-
-/* styling for listings on index.html page */
-
-.featured-image-block-grid-header {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.featured-image-block {
-  margin-bottom: 20px;
-}
-
-.featured-image-block .featured-image-block-title {
-  font-weight: 600;
-  margin-top: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 1em;
-  color: #404040;
-}
-
-.featured-image-block a:hover p {
-  color: #1779ba;
-}
-
-#listings h2 {
-  text-align: center;
 }
 
 /* Slider container for testimonials */
@@ -603,7 +466,7 @@ gmp-map {
   font-size: 16px;
 }
 
-
+/* For about us cards */
 .card-user-container {
   margin-bottom: 1rem;
   background-color: #fefefe;
@@ -674,6 +537,6 @@ gmp-map {
 }
 
 /* Centering the neighbor key */
-h4{
+h4 {
   text-align: center;
 } 

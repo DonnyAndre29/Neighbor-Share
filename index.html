@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Link to Google Material Symbols API -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- Link to Google Fonts API - url can be altered to include more fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,53 +75,56 @@
       </div>
     </div>
   </div>
+  
   <!-- Pictures of listings that will populate with real ones when the user enters their key? or hide until they enter the key? -->
-
-  <section class="filter-simple">
-    <div class="button-group round">
-      <button class="button hollow filter-simple-button is-active" data-filter="all">All</button>
-      <button class="button hollow filter-simple-button" data-filter="tools">Tools</button>
-      <button class="button hollow filter-simple-button" data-filter="events">Events</button>
-      <button class="button hollow filter-simple-button" data-filter="games">Games</button>
-    </div>
-    <div class="row small-up-2 medium-up-3 large-up-4" id="photo-container"></div>
-  </section>
-
-  <section id="faq" align="center">
-    <h4>Frequently Asked Questions</h4>
-    <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
-      <li class="accordion-item" data-accordion-item>
-        <a href="#" class="accordion-title">How does Neighbor Share ensure the safety and security of
-          transactions?</a>
-        <div class="accordion-content" data-tab-content>
-          <p>Neighbor Share prioritizes safety by allowing users to communicate through the platform's messaging
-            system.
-            It's recommended to arrange meetings in public places and adhere to community guidelines.
-            Additionally, user profiles and reviews contribute to building a trustworthy neighborhood network.</p>
-        </div>
-      </li>
-      <li class="accordion-item" data-accordion-item>
-        <a href="#" class="accordion-title">What if an item is damaged during the borrowing period?</a>
-        <div class="accordion-content" data-tab-content>
-          <p>In the unfortunate event of damage, communicate with the neighbor through the platform's messaging system
-            to discuss the situation.
-            Neighbor Share encourages open communication and collaborative problem-solving. If a resolution cannot be
-            reached, refer to the community guidelines for guidance.</p>
-        </div>
-      </li>
-      <li class="accordion-item" data-accordion-item>
-        <a href="#" class="accordion-title">Can I lend items for a fee on Neighbor Share?</a>
-        <div class="accordion-content" data-tab-content>
-          <p>Neighbor Share promotes a culture of sharing and community support. While lending items for free is
-            encouraged, if you feel that a small fee is appropriate for certain items, it's important to communicate
-            this transparently with your neighbors. However, keep in mind that the primary goal is to foster a sense
-            of
-            community and reduce material consumption.</p>
-        </div>
-      </li>
-    </ul>
-  </section>
-
+  <div class="grid-container">
+    <section class="filter-simple">
+      <div class="button-group round">
+        <button class="button hollow filter-simple-button is-active" data-filter="all">All</button>
+        <button class="button hollow filter-simple-button" data-filter="tools">Tools</button>
+        <button class="button hollow filter-simple-button" data-filter="events">Events</button>
+        <button class="button hollow filter-simple-button" data-filter="camping">Camping</button>
+        <button class="button hollow filter-simple-button" data-filter="outdoor">Outdoor</button>
+      </div>
+      <div class="row small-up-2 medium-up-3 large-up-4" id="photo-container"></div>
+    </section>
+  </div>
+  <div class="grid-container">
+    <section id="faq" align="center">
+      <h4>Frequently Asked Questions</h4>
+      <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+        <li class="accordion-item" data-accordion-item>
+          <a href="#" class="accordion-title">How does Neighbor Share ensure the safety and security of
+            transactions?</a>
+          <div class="accordion-content" data-tab-content>
+            <p>Neighbor Share prioritizes safety by allowing users to communicate through the platform's messaging
+              system.
+              It's recommended to arrange meetings in public places and adhere to community guidelines.
+              Additionally, user profiles and reviews contribute to building a trustworthy neighborhood network.</p>
+          </div>
+        </li>
+        <li class="accordion-item" data-accordion-item>
+          <a href="#" class="accordion-title">What if an item is damaged during the borrowing period?</a>
+          <div class="accordion-content" data-tab-content>
+            <p>In the unfortunate event of damage, communicate with the neighbor through the platform's messaging system
+              to discuss the situation.
+              Neighbor Share encourages open communication and collaborative problem-solving. If a resolution cannot be
+              reached, refer to the community guidelines for guidance.</p>
+          </div>
+        </li>
+        <li class="accordion-item" data-accordion-item>
+          <a href="#" class="accordion-title">Can I lend items for a fee on Neighbor Share?</a>
+          <div class="accordion-content" data-tab-content>
+            <p>Neighbor Share promotes a culture of sharing and community support. While lending items for free is
+              encouraged, if you feel that a small fee is appropriate for certain items, it's important to communicate
+              this transparently with your neighbors. However, keep in mind that the primary goal is to foster a sense
+              of
+              community and reduce material consumption.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
 
   <!-- testimonial slider code -->
 
@@ -204,7 +208,7 @@
       <p>Created by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span>
         <span class="material-symbols-outlined">
           copyright
-          </span>2023
+        </span>2023
     </div>
     <div class="social-footer-icons">
       <ul class="menu simple">
