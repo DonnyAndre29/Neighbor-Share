@@ -62,11 +62,6 @@ h3 {
 .indent-2, 
 .indent-3 {
     color: darkblue;
-}
+}}
 
 
-.point,
-.point-2,
-.point-3 {
-    cursor: pointer;
-}
