@@ -52,7 +52,8 @@ THEN I am provided with a modal window with further information and an option to
 
 
 # Visuals
-![N-S Screenshot](https://github.com/DonnyAndre29/Neighbor-Share/assets/148520166/95aec135-a62a-4761-a760-062ae7f4b45e)
+![Web capture_17-12-2023_23156_donnyandre29 github io](https://github.com/DonnyAndre29/Neighbor-Share/assets/148520166/59e9f2d6-de0e-4834-a19c-7e0951e54b40)
+
 
 
 # Credits
