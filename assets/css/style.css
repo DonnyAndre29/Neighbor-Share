@@ -22,7 +22,6 @@ h3 {
     font-size: 32px;
 }
 
-<<<<<<< HEAD
 .row.small-up-2.medium-up-3.large-up-4 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -59,7 +58,6 @@ h3 {
 
 .column column-block filter-simple-item events {
     width: fit-content;
-=======
 .indent, 
 .indent-2, 
 .indent-3 {
@@ -71,5 +69,4 @@ h3 {
 .point-2,
 .point-3 {
     cursor: pointer;
->>>>>>> origin/main
 }
