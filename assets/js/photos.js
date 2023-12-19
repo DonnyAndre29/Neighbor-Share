@@ -3,9 +3,9 @@ const photoContainer = document.getElementById('photo-container');
 
 // Run each photo id through Flickr method flickr.tags.getListPhoto to get the tag list
 function getTags(x) {
-
+    console.log("1");
     const photo_id = x;
-    const imageContainer = document.getElementById(photo_id);
+    var photoDiv = document.getElementById(x);
     const flickrTagslist = `https://api.flickr.com/services/rest/?method=flickr.tags.getListPhoto&api_key=${apiKey}&photo_id=${photo_id}&format=json&nojsoncallback=1`;
     fetch(flickrTagslist)
         .then(response => response.json())
@@ -14,7 +14,8 @@ function getTags(x) {
             // tagList = "";
             tags.forEach(tag => {
                 const userTag = tag._content;
-                imageContainer.classList.add(userTag);
+                console.log(userTag);
+                photoDiv.classList.add(userTag);
             })
         })
 }
@@ -50,21 +51,12 @@ searchButton.addEventListener("click", function () {
 
                 const photoDiv = document.createElement('div');
                 photoDiv.appendChild(imgElement);
-                photoDiv.setAttribute('id', photo.id);
-                console.log(photo.id);
+                // photoDiv.setAttribute('id', photo.id);
+                // console.info(photoDiv);
                 photoDiv.classList.add('column', 'column-block', 'filter-simple-item');
-                getTags(photo.id);
-                /*
-                                if (tagsArr.includes('outdoor')) { photoDiv.classList.add('outdoor') };
-                                if (tagsArr.includes('tools')) { photoDiv.classList.add('tools') };
-                                if (tagsArr.includes('camping')) {
-                                    photoDiv.classList.add('camping');
-                                }
-                                else if (tagsArr.includes('events')) {
-                                    photoDiv.classList.add('events');
-                                }*/
-                console.info(imgElement);
+                photoDiv.id = photo.id;
                 photoContainer.appendChild(photoDiv);
+                getTags(photo.id);
             });
         })
         .catch(error => console.error('Error fetching data from Flickr API:', error));
