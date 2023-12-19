@@ -2,3 +2,4 @@
 $('#copy').on('click', () => {
    navigator.clipboard.writeText($('#input').val());
 });
+
