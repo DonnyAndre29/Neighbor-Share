@@ -22,10 +22,12 @@ function getTags(x) {
 let searchButton = document.getElementById('searchKey');
 
 searchButton.addEventListener("click", function () {
-    let input = document.getElementById("yourkey").textContent;
-    console.log("input is " + input);
+    let input = document.getElementById("yourKey");
+
+    console.log("input is " + input.value);
+
+    const tags = 'neighbor-share, ' + input.value;
     console.log("tags are " + tags);
-    const tags = 'neighbor-share, ' + input;
     // Flickr API endpoint for fetching photos with user-specific tags
     const flickrEndpoint = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${tags}&tag_mode=all&format=json&nojsoncallback=1`;
 
@@ -68,21 +70,21 @@ searchButton.addEventListener("click", function () {
         .catch(error => console.error('Error fetching data from Flickr API:', error));
 });
 
-    /* Function that adds classes to pictures tagged as "tools" etc from Foundation Building Blocks */
+/* Function that adds classes to pictures tagged as "tools" etc from Foundation Building Blocks */
 
-    // shows and hides filtered items
-    $(".filter-simple-button").click(function () {
-        var value = $(this).attr('data-filter');
-        if (value === "all") {
-            $('.filter-simple-item').show('1000');
-        } else {
-            $(".filter-simple-item").not('.' + value).hide('3000');
-            $('.filter-simple-item').filter('.' + value).show('3000');
-        }
-    });
+// shows and hides filtered items
+$(".filter-simple-button").click(function () {
+    var value = $(this).attr('data-filter');
+    if (value === "all") {
+        $('.filter-simple-item').show('1000');
+    } else {
+        $(".filter-simple-item").not('.' + value).hide('3000');
+        $('.filter-simple-item').filter('.' + value).show('3000');
+    }
+});
 
-    // changes active class on filter buttons
-    $('.filter-simple-button').click(function () {
-        $(this).siblings().removeClass('is-active');
-        $(this).addClass('is-active');
-    });
+// changes active class on filter buttons
+$('.filter-simple-button').click(function () {
+    $(this).siblings().removeClass('is-active');
+    $(this).addClass('is-active');
+});
