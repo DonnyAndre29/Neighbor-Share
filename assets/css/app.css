@@ -2,6 +2,10 @@ body {
   margin: 10px;
 }
 
+.hidden {
+  display: none;
+}
+
 .subnav-hero-section {
   text-align: center;
   background: #1779ba;
@@ -539,4 +543,4 @@ gmp-map {
 /* Centering the neighbor key */
 h4 {
   text-align: center;
-} 
+}

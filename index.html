@@ -20,12 +20,12 @@
 </head>
 
 <body>
-  <header class="subnav-hero-section">
+  <header class="subnav-hero-section" id="top">
     <img src="./assets/Images/Logo.png" width="75px" height="75px">
     <h1 class="subnav-hero-headline"> Neighbor Share</h1>
     <div>by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span></div>
     <ul class="subnav-hero-subnav">
-      <li><a href="#home">Home</a></li>
+      <li><a href="#top">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#review">Reviews</a></li>
@@ -43,8 +43,11 @@
         <div class="card">
           <div class="card-section">
             <h4>Step 1</h4>
-            <p>Enter your key <input type="text" id="yourKey" placeholder="happy-82ay9J5"></input> <a class="button" href="#" id="searchKey">Go</a> or <a href="create.html">create
-                your space</a></p>
+            <form>
+              <p>Enter your key <input type="text" id="yourKey" placeholder="happy-82ay9J5"></input> <a class="button"
+                  href="#" id="searchKey">Go</a> or <a href="create.html">create
+                  your space</a></p>
+            </form>
           </div>
         </div>
       </div>
@@ -75,10 +78,10 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Pictures of listings that will populate with real ones when the user enters their key? or hide until they enter the key? -->
   <div class="grid-container">
-    <section class="filter-simple">
+    <section id="listingsFilter" class="filter-simple hidden">
       <div class="button-group round">
         <button class="button hollow filter-simple-button is-active" data-filter="all">All</button>
         <button class="button hollow filter-simple-button" data-filter="tools">Tools</button>
@@ -118,8 +121,7 @@
             <p>Neighbor Share promotes a culture of sharing and community support. While lending items for free is
               encouraged, if you feel that a small fee is appropriate for certain items, it's important to communicate
               this transparently with your neighbors. However, keep in mind that the primary goal is to foster a sense
-              of
-              community and reduce material consumption.</p>
+              of community and reduce material consumption.</p>
           </div>
         </li>
       </ul>
@@ -212,11 +214,8 @@
     </div>
     <div class="social-footer-icons">
       <ul class="menu simple">
-        <li><a href="https://www.facebook.com/">link<i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.instagram.com/?hl=en">link<i class="fa fa-instagram" aria-hidden="true"></i></a>
-        </li>
-        <li><a href="https://www.pinterest.com/">link<i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-        <li><a href="https://twitter.com/?lang=en">link<i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="about.html">about us</a></li>
+        <li><a href="#top">back to top</a></li>
       </ul>
     </div>
   </footer>
