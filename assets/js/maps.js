@@ -39,8 +39,9 @@ function initMap() {
 
     /* var storedLocation = localStorage.getItem('userLocation');
     var userLocation = storedLocation ? JSON.parse(storedLocation) : null;*/
+    // Reformatted by Sarun Thunyapauksanon
     const userLocation = JSON.parse(localStorage.getItem('userLocation')) || {};
-
+    // end reformatting
 
     var mapContainer = document.getElementById('map');
     var map = new google.maps.Map(mapContainer, {
@@ -109,7 +110,7 @@ function initMap() {
 You will be able to borrow and lend all sorts of items exclusively with our neighbors. Go to https://donnyandre29.github.io/Neighbor-Share/ and enter the key ${locationData.key} to check out my listings and add your own on Flickr.
         
 Please feel free to share with anybody in the neighborhood!`;
-        
+
         let messageEl = document.getElementById("input");
         messageEl.value = message;
 
