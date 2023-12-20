@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- Link to Google Material Symbols API -->
- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Link to Google Material Symbols API -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- Link to Google Fonts API - url can be altered to include more fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,7 @@
 </head>
 
 <body>
-  <header class="subnav-hero-section">
+  <header class="subnav-hero-section" id="top">
     <img src="./assets/Images/Logo.png" width="75px" height="75px">
     <h1 class="subnav-hero-headline"> Neighbor Share</h1>
     <div>by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span></div>
@@ -32,107 +33,100 @@
     </ul>
   </header>
   <div class="grid-container">
-    <section class="content">
-      <h3>Welcome to Neighbor-Share, a community platform built by coding students. <br> Our goal is to connect and
-        create
-        relationships within community by lending and borrowing items.<br>
-        Start sharing with your neighbors today and make your community even stronger!</h3>
-    </section>
-
-    <!-- User card example #1 -->
-    <div class="card-user-container medium-3 columns">
-
-      <!--card's image-->
-      <div class="card-user-avatar">
-        <img src="https://github.com/benitaisaac.png" alt="Profile picture of Benita Isaac" class="user-image">
+    
+      <div class="cell">
+        <section class="content">
+          <h3>Welcome to Neighbor-Share, a community platform built by coding students. <br> Our goal is to connect and
+            create
+            relationships within community by lending and borrowing items.<br>
+            Start sharing with your neighbors today and make your community even stronger!</h3>
+        </section>
+      </div>
+      <div class="grid-x grid-margin-x small-up-2 medium-up-4">
+      <div class="cell">
+        <div class="card-user-container">
+          <!-- User card #1 -->
+          <!--card's image-->
+          <div class="card-user-avatar">
+            <img src="https://github.com/benitaisaac.png" alt="Profile picture of Benita Isaac" class="user-image">
+          </div>
+          <!--user info name, bio and location-->
+          <div class="card-user-bio">
+            <h4>Benita Isaac</h4>
+            <p>GitHub: <a href="https://github.com/benitaisaac">benitaisaac</a></p>
+          </div>
+          <!--card's follow button-->
+          <div class="card-user-button">
+            <a href="https://github.com/benitaisaac" class="button">FOLLOW</a>
+          </div>
+        </div>
       </div>
 
-      <!--user info name, bio and location-->
-      <div class="card-user-bio">
-        <h4>Benita Isaac</h4>
-        <p>GitHub: <a href="https://github.com/benitaisaac">benitaisaac</a></p>
-
+      <div class="cell">
+        <div class="card-user-container">
+          <!-- User card #2 -->
+          <div class="card-user-avatar">
+            <img src="https://github.com/DonnyAndre29.png" alt="Profile picture of Don Andre Clark" class="user-image">
+          </div>
+          <div class="card-user-bio">
+            <h4>Don Andre Clark</h4>
+            <p>GitHub: <a href="https://github.com/DonnyAndre29">DonnyAndre29</a></p>
+          </div>
+          <div class="card-user-button">
+            <a href="https://github.com/DonnyAndre29" class="button">FOLLOW</a>
+          </div>
+        </div>
       </div>
 
-
-
-      <!--card's follow button-->
-      <div class="card-user-button">
-        <a href="https://github.com/benitaisaac" class="button">FOLLOW</a>
-      </div>
-    </div>
-
-    <!-- User card example #2 -->
-    <div class="card-user-container medium-3 columns">
-      <div class="card-user-avatar">
-        <img src="https://github.com/DonnyAndre29.png" alt="Profile picture of Don Andre Clark" class="user-image">
-      </div>
-
-      <div class="card-user-bio">
-        <h4>Don Andre Clark</h4>
-        <p>GitHub: <a href="https://github.com/DonnyAndre29">DonnyAndre29</a></p>
-      </div>
-      <div class="card-user-button">
-        <a href="https://github.com/DonnyAndre29" class="button">FOLLOW</a>
-      </div>
-    </div>
-
-    <!-- User card example #3 -->
-    <div class="card-user-container medium-3 columns">
-
-      <!--card's image-->
-      <div class="card-user-avatar">
-        <img src="https://github.com/jhill1230.png" alt="Profile picture of Justin Hill" class="user-image">
+      <div class="cell">
+        <div class="card-user-container">
+          <!-- User card #3 -->
+          <!--card's image-->
+          <div class="card-user-avatar">
+            <img src="https://github.com/jhill1230.png" alt="Profile picture of Justin Hill" class="user-image">
+          </div>
+          <!--user info name, bio and location-->
+          <div class="card-user-bio">
+            <h4>Justin Hill</h4>
+            <p>GitHub: <a href="https://github.com/jhill1230">jhill1230</a></p>
+          </div>
+          <!--card's follow button-->
+          <div class="card-user-button">
+            <a href="https://github.com/jhill1230" class="button">FOLLOW</a>
+          </div>
+        </div>
       </div>
 
-      <!--user info name, bio and location-->
-      <div class="card-user-bio">
-        <h4>Justin Hill</h4>
-        <p>GitHub: <a href="https://github.com/jhill1230">jhill1230</a></p>
-      </div>
-
-
-      <!--card's follow button-->
-      <div class="card-user-button">
-        <a href="https://github.com/jhill1230" class="button">FOLLOW</a>
-      </div>
-    </div>
-
-    <!-- User card example #4 -->
-    <div class="card-user-container medium-3 columns">
-
-      <!--card's image-->
-      <div class="card-user-avatar">
-        <img src="https://github.com/kerilsen.png" alt="" class="user-image">
-      </div>
-
-      <!--user info name, bio and location-->
-      <div class="card-user-bio">
-        <h4>Keri Sen</h4>
-        <p>GitHub: <a href="https://github.com/kerilsen">kerilsen</a></p>
-      </div>
-
-      <!--card's follow button-->
-      <div class="card-user-button">
-        <a href="https://github.com/kerilsen" class="button">FOLLOW</a>
+      <div class="cell">
+        <div class="card-user-container">
+          <!-- User card example #4 -->
+          <!--card's image-->
+          <div class="card-user-avatar">
+            <img src="https://github.com/kerilsen.png" alt="" class="user-image">
+          </div>
+          <!--user info name, bio and location-->
+          <div class="card-user-bio">
+            <h4>Keri Sen</h4>
+            <p>GitHub: <a href="https://github.com/kerilsen">kerilsen</a></p>
+          </div>
+          <!--card's follow button-->
+          <div class="card-user-button">
+            <a href="https://github.com/kerilsen" class="button">FOLLOW</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-
   <!-- This will take users back to the top -->
-
   <footer class="social-footer">
     <div class="social-footer-left">
       <p>Created by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span>
     </div>
     <div class="social-footer-icons">
       <ul class="menu simple">
-        <li><a href="https://www.facebook.com/">link<i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.instagram.com/?hl=en">link<i class="fa fa-instagram" aria-hidden="true"></i></a>
-        </li>
-        <li><a href="https://www.pinterest.com/">link<i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-        <li><a href="https://twitter.com/?lang=en">link<i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="about.html">about us</a></li>
+        <li><a href="#top">back to top</a></li>
       </ul>
     </div>
   </footer>

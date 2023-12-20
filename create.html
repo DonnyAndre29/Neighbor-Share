@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <header class="subnav-hero-section">
+  <header class="subnav-hero-section" id="top">
     <img src="./assets/Images/Logo.png" width="75px" height="75px">
     <h1 class="subnav-hero-headline"> Neighbor Share</h1>
     <div>by <span id="logo"><sub>8</sub>roup ei<sub>8</sub>ht</span></div>
@@ -44,8 +44,11 @@
         <div class="card">
           <div class="card-section">
             <h4>Step 1</h4>
-            <p>Enter your key <input type="text" id="yourKey" placeholder="happy-82ay9J5"></input> <a class="button" href="index.html" id="searchKey">Go</a> or <a href="create.html">create
-              your space</a></p>
+            <form>
+            <p>Enter your key <input type="text" id="yourKey" placeholder="happy-82ay9J5"></input> <a class="button"
+                href="index.html" id="searchKey">Go</a> or <a href="create.html">create
+                your space</a></p>
+                </form>
           </div>
         </div>
       </div>
@@ -77,26 +80,19 @@
     </div>
 
 
-    <h3>Your Key:</h3>
-    <h4><span id="neighborkey"></span></h4>
-    <p><button class="button" data-open="spaceShare">Share with your Neighbors</button></p>
-    <!-- if space is there already, redirect to index.html with the unique id attached to display the map and loan items-->
-    <!-- if no results found, then prompt user to create a space using modal? -->
+    <div id="yourkey" class="hidden">
+      <h3>Your Key:</h3>
+      <h4><span id="neighborkey"></span></h4>
+      <p align="center"><button class="button" data-open="spaceShare">Share with your Neighbors</button></p>
+    </div>
+    
     <div class="reveal" id="spaceShare" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
       <h3>Share with your Neighbors!</h3>
       <button class="close-button" data-close aria-label="Close modal" type="button">
         <span aria-hidden="true">&times;</span>
       </button>
       <form>
-        <textarea id="input" rows="13" cols="50">
-  Hi Neighbor! I just set up a new neighbor lending space at Neighbor Share. 
-  
-  You will be able to borrow and lend all sorts of items exclusively with our neighbors. You can access it using the passcode below. 
-  
-  Please feel free to share with anybody in the neighborhood!
-              </textarea>
-        <!-- need to override default event? -->
-
+        <textarea id="input" rows="13" cols="50"></textarea>
         <div id="share">
           <button class="button" id="copy">
             <span class="material-symbols-outlined">
@@ -106,14 +102,15 @@
         </div>
       </form>
     </div>
-    <!-- User checks if they have a community already  -->
+
+    <!-- User gets a key that is attached to their address  -->
     <div class="marketing-site-content-section">
       <div class="marketing-site-content-section-block small-order-2 medium-order-1">
-        <h3 class="marketing-site-content-section-block-header"> Before we start, let's see if you are
-          eligible to have a Neighbor Share Account
+        <h3 class="marketing-site-content-section-block-header">Before we start, let's get you set up!
         </h3>
-        <p class="marketing-site-content-section-block-subheader subheader">Enter your address and press 'search' to
-          verify your eligibility</p>
+        <p class="marketing-site-content-section-block-subheader subheader">Put in your address and hit 'enter' to get
+          a
+          key.</p>
         <div class="input-group input-group-rounded">
           <input class="input-group-field" type="text" id="addressInput" placeholder="Enter your address"><br>
           <div class="input-group-button">
@@ -121,10 +118,9 @@
               value="Search"> -->
           </div>
           <div id="confirmation-message">
-            <p>Congrats! You are approved to set up a NeighborShare Account.</p>
+            <p>Congrats! You are on NeighborShare.</p>
           </div>
         </div>
-        <!-- <a href="#" class="round button small">learn more</a> -->
       </div>
       <div class="marketing-site-content-section-img small-order-1 medium-order-2">
         <div id="map-container">
@@ -143,11 +139,8 @@
     </div>
     <div class="social-footer-icons">
       <ul class="menu simple">
-        <li><a href="https://www.facebook.com/">link<i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.instagram.com/?hl=en">link<i class="fa fa-instagram" aria-hidden="true"></i></a>
-        </li>
-        <li><a href="https://www.pinterest.com/">link<i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-        <li><a href="#">back to top<i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="about.html">about us</a></li>
+        <li><a href="#top">back to top</a></li>
       </ul>
     </div>
   </footer>

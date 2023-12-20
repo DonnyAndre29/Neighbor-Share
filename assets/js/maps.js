@@ -37,8 +37,9 @@ function generateKey() {
 // Google maps initializing map function 
 function initMap() {
 
-    var storedLocation = localStorage.getItem('userLocation');
-    var userLocation = storedLocation ? JSON.parse(storedLocation) : null;
+    /* var storedLocation = localStorage.getItem('userLocation');
+    var userLocation = storedLocation ? JSON.parse(storedLocation) : null;*/
+    const userLocation = JSON.parse(localStorage.getItem('userLocation')) || {};
 
 
     var mapContainer = document.getElementById('map');
@@ -86,15 +87,31 @@ function initMap() {
         }
         // Call on function to generate unique ID to associate with locationData
         let neighborKey = generateKey();
-        document.querySelector("#neighborkey").textContent = neighborKey;
+
+        // Write key to page
+        let keyEl = document.getElementById("yourkey");
+        keyEl.classList.remove("hidden");
+        let keyText = document.getElementById("neighborkey");
+        keyText.textContent = neighborKey;
+
         // Save the location information to local storage
-        var locationData = {
+        const locationData = {
             name: place.name,
             address: place.formatted_address,
             latitude: place.geometry.location.lat(),
             longitude: place.geometry.location.lng(),
             key: neighborKey
         };
+
+        // Generate custom message to share key with neighbors
+        const message = `Hi Neighbor! I just set up a new neighbor lending space at Neighbor Share at ${locationData.name}. 
+  
+You will be able to borrow and lend all sorts of items exclusively with our neighbors. Go to https://donnyandre29.github.io/Neighbor-Share/ and enter the key ${locationData.key} to check out my listings and add your own on Flickr.
+        
+Please feel free to share with anybody in the neighborhood!`;
+        
+        let messageEl = document.getElementById("input");
+        messageEl.value = message;
 
         // Convert the location data to a JSON string and store it in local storage
         localStorage.setItem('userLocation', JSON.stringify(locationData));
@@ -108,12 +125,5 @@ function initMap() {
         }
     });
 }
-function writeKey() {
-    let keyEl = document.querySelector("#neighborkey");
-    var key = JSON.parse(localStorage.getItem('userLocation'));
-    console.log("Key content in local storage is " + key);
-    keyEl.textContent = key;
-}
 
-writeKey();
 hideAddressConfirmation();
